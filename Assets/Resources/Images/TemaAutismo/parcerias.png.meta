@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 9856ecfedd73a014997f193dada3de88
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5014700422485378944
+    second: parcerias_0
+  - first:
+      213: -3723777362989010533
+    second: parcerias_1
+  - first:
+      213: 6240948643373969085
+    second: parcerias_2
+  - first:
+      213: 5028738822274187420
+    second: parcerias_3
+  - first:
+      213: 2518250417618757986
+    second: parcerias_4
+  - first:
+      213: 3925353874049374983
+    second: parcerias_5
+  - first:
+      213: -679314349258073159
+    second: parcerias_6
+  - first:
+      213: -4747974270752458218
+    second: parcerias_7
+  - first:
+      213: 8327093401660296984
+    second: parcerias_8
+  - first:
+      213: 8709202379447920244
+    second: parcerias_9
+  - first:
+      213: -1654375110596376861
+    second: parcerias_10
+  - first:
+      213: -8547822712791101579
+    second: parcerias_11
+  - first:
+      213: 1871964680708531421
+    second: parcerias_12
+  - first:
+      213: 3926009537451058405
+    second: parcerias_13
+  - first:
+      213: 1714668964546394171
+    second: parcerias_14
+  - first:
+      213: -6207205749546220539
+    second: parcerias_15
+  - first:
+      213: -2313451147665213848
+    second: parcerias_16
+  - first:
+      213: 4219416969772126539
+    second: parcerias_17
+  - first:
+      213: -6958043135885241284
+    second: parcerias_18
+  - first:
+      213: 1074683514300560127
+    second: parcerias_19
+  - first:
+      213: -5977937775175575566
+    second: parcerias_20
+  - first:
+      213: 6133860219524743602
+    second: parcerias_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: parcerias_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 26
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0870e39177bc79540800000000000000
+      internalID: 5014700422485378944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 27
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b913660c73c725cc0800000000000000
+      internalID: -3723777362989010533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 26
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbee2c5a9bd4c9650800000000000000
+      internalID: 6240948643373969085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_3
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 27
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c908ed1c05ba9c540800000000000000
+      internalID: 5028738822274187420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_4
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 26
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26925ad996f92f220800000000000000
+      internalID: 2518250417618757986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_5
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 27
+        width: 62
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b9a601d88a97630800000000000000
+      internalID: 3925353874049374983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_6
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 27
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb95a1d2379296f0800000000000000
+      internalID: -679314349258073159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_7
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 26
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61afa1d7e8ecb1eb0800000000000000
+      internalID: -4747974270752458218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_8
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 27
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f06797457cf8370800000000000000
+      internalID: 8327093401660296984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_9
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 27
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476eaf7bb6d4dd870800000000000000
+      internalID: 8709202379447920244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_10
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 27
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6c7a72a9a7a09e0800000000000000
+      internalID: -1654375110596376861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_11
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 27
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f0211f788006980800000000000000
+      internalID: -8547822712791101579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_12
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 26
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd4a5b185fd8af910800000000000000
+      internalID: 1871964680708531421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_13
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 27
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4e0989fdcfb7630800000000000000
+      internalID: 3926009537451058405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_14
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 27
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38bc2ba65abbc710800000000000000
+      internalID: 1714668964546394171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_15
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 26
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504098a02439bd9a0800000000000000
+      internalID: -6207205749546220539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_16
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 27
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 866f13a3078f4efd0800000000000000
+      internalID: -2313451147665213848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_17
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 26
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b41d58ae0616e8a30800000000000000
+      internalID: 4219416969772126539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_18
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 27
+        width: 63
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3417b912a0107f90800000000000000
+      internalID: -6958043135885241284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_19
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 26
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff27adb56fa0aee00800000000000000
+      internalID: 1074683514300560127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_20
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 27
+        width: 70
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f7554514491a0da0800000000000000
+      internalID: -5977937775175575566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: parcerias_21
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 27
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b10caefe59df1550800000000000000
+      internalID: 6133860219524743602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      parcerias_0: 5014700422485378944
+      parcerias_1: -3723777362989010533
+      parcerias_10: -1654375110596376861
+      parcerias_11: -8547822712791101579
+      parcerias_12: 1871964680708531421
+      parcerias_13: 3926009537451058405
+      parcerias_14: 1714668964546394171
+      parcerias_15: -6207205749546220539
+      parcerias_16: -2313451147665213848
+      parcerias_17: 4219416969772126539
+      parcerias_18: -6958043135885241284
+      parcerias_19: 1074683514300560127
+      parcerias_2: 6240948643373969085
+      parcerias_20: -5977937775175575566
+      parcerias_21: 6133860219524743602
+      parcerias_3: 5028738822274187420
+      parcerias_4: 2518250417618757986
+      parcerias_5: 3925353874049374983
+      parcerias_6: -679314349258073159
+      parcerias_7: -4747974270752458218
+      parcerias_8: 8327093401660296984
+      parcerias_9: 8709202379447920244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

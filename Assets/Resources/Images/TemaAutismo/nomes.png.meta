@@ -1,0 +1,2015 @@
+fileFormatVersion: 2
+guid: 18e2e0dfdcc47ab4da5c3705ff377f48
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5881151170061059174
+    second: nomes_0
+  - first:
+      213: -9073022847843240125
+    second: nomes_1
+  - first:
+      213: -869146098391205776
+    second: nomes_2
+  - first:
+      213: -3498114820322920780
+    second: nomes_3
+  - first:
+      213: 301820084979222700
+    second: nomes_4
+  - first:
+      213: 2982959037950301928
+    second: nomes_5
+  - first:
+      213: -3672006591342308262
+    second: nomes_6
+  - first:
+      213: -3571355469717520518
+    second: nomes_7
+  - first:
+      213: -894308220074397816
+    second: nomes_8
+  - first:
+      213: -3384238226992694977
+    second: nomes_9
+  - first:
+      213: -4995512936779943051
+    second: nomes_10
+  - first:
+      213: -6026316105994041794
+    second: nomes_11
+  - first:
+      213: -8863635862198065231
+    second: nomes_12
+  - first:
+      213: 8077435382622543069
+    second: nomes_13
+  - first:
+      213: 2210674148353877710
+    second: nomes_14
+  - first:
+      213: -467383666376600382
+    second: nomes_15
+  - first:
+      213: 3535571654882777035
+    second: nomes_16
+  - first:
+      213: 4876266161310437596
+    second: nomes_17
+  - first:
+      213: -1533951986241311990
+    second: nomes_18
+  - first:
+      213: 4488244947584960793
+    second: nomes_19
+  - first:
+      213: -7132793319948170823
+    second: nomes_20
+  - first:
+      213: -478150256552742190
+    second: nomes_21
+  - first:
+      213: -6968804729888492807
+    second: nomes_22
+  - first:
+      213: 3637106163126403334
+    second: nomes_23
+  - first:
+      213: 6448004591482120104
+    second: nomes_24
+  - first:
+      213: -4856813345578207944
+    second: nomes_25
+  - first:
+      213: 2405423857910785576
+    second: nomes_26
+  - first:
+      213: 5933867956206693168
+    second: nomes_27
+  - first:
+      213: 6639733758944254696
+    second: nomes_28
+  - first:
+      213: 1135186512651065839
+    second: nomes_29
+  - first:
+      213: -5928511925371191684
+    second: nomes_30
+  - first:
+      213: -4447433854909680030
+    second: nomes_31
+  - first:
+      213: -3691004837690556790
+    second: nomes_32
+  - first:
+      213: -1850663871435206329
+    second: nomes_33
+  - first:
+      213: -1148528760683338679
+    second: nomes_34
+  - first:
+      213: 6539152066316921263
+    second: nomes_35
+  - first:
+      213: -2173966459364968675
+    second: nomes_36
+  - first:
+      213: 7519633494316334922
+    second: nomes_37
+  - first:
+      213: 704495423814930578
+    second: nomes_38
+  - first:
+      213: -5081567139626500756
+    second: nomes_39
+  - first:
+      213: 7965082834033402930
+    second: nomes_40
+  - first:
+      213: 2742823872250305924
+    second: nomes_41
+  - first:
+      213: -3255593264042575656
+    second: nomes_42
+  - first:
+      213: -2383240152508617238
+    second: nomes_43
+  - first:
+      213: -3831701841896241281
+    second: nomes_44
+  - first:
+      213: 580519267990197138
+    second: nomes_45
+  - first:
+      213: -1245206840536802969
+    second: nomes_46
+  - first:
+      213: -3207796070704945217
+    second: nomes_47
+  - first:
+      213: -6495550778571868818
+    second: nomes_48
+  - first:
+      213: 6170192226144749223
+    second: nomes_49
+  - first:
+      213: -1278317017980935557
+    second: nomes_50
+  - first:
+      213: -4750725862510704579
+    second: nomes_51
+  - first:
+      213: 8231727214954362246
+    second: nomes_52
+  - first:
+      213: -6741516910522395406
+    second: nomes_53
+  - first:
+      213: -6629322254287815162
+    second: nomes_54
+  - first:
+      213: -8692283577744690225
+    second: nomes_55
+  - first:
+      213: -1832296190919316780
+    second: nomes_56
+  - first:
+      213: 366610941387623492
+    second: nomes_57
+  - first:
+      213: -3835492178789538979
+    second: nomes_58
+  - first:
+      213: -3666078618259126473
+    second: nomes_59
+  - first:
+      213: 4756989469962209250
+    second: nomes_60
+  - first:
+      213: 8192899353415562706
+    second: nomes_61
+  - first:
+      213: -2183339749133829620
+    second: nomes_62
+  - first:
+      213: -8691449202246897799
+    second: nomes_63
+  - first:
+      213: 2120565078531731130
+    second: nomes_64
+  - first:
+      213: 4938015758839911412
+    second: nomes_65
+  - first:
+      213: -4200113698492946907
+    second: nomes_66
+  - first:
+      213: 8490885726665732346
+    second: nomes_67
+  - first:
+      213: -2162469034846138615
+    second: nomes_68
+  - first:
+      213: 6143181977337430463
+    second: nomes_69
+  - first:
+      213: -2224349523341661542
+    second: nomes_70
+  - first:
+      213: 6860894771037166613
+    second: nomes_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: nomes_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 138
+        width: 33
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9b3326ab24f16ea0800000000000000
+      internalID: -5881151170061059174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 139
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347fc437ac5261280800000000000000
+      internalID: -9073022847843240125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 139
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078b97b7a3c20f3f0800000000000000
+      internalID: -869146098391205776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_3
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 140
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b67f1fca13347fc0800000000000000
+      internalID: -3498114820322920780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_4
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 139
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca8c347a4c7403400800000000000000
+      internalID: 301820084979222700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_5
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 138
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6919cc079956920800000000000000
+      internalID: 2982959037950301928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_6
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 139
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a541626d5796a0dc0800000000000000
+      internalID: -3672006591342308262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 139
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7fb6d44f1fff6ec0800000000000000
+      internalID: -3571355469717520518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_8
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 139
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88fe0ce7967c693f0800000000000000
+      internalID: -894308220074397816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 139
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f397dc45345c801d0800000000000000
+      internalID: -3384238226992694977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_10
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 132
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573fc5c837f5caab0800000000000000
+      internalID: -4995512936779943051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_11
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 139
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36820e2e693e5ca0800000000000000
+      internalID: -6026316105994041794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_12
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 139
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b76547152a0ef480800000000000000
+      internalID: -8863635862198065231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_13
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 139
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc53653fa0d81070800000000000000
+      internalID: 8077435382622543069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_14
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 140
+        width: 40
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6a5cedc64edae10800000000000000
+      internalID: 2210674148353877710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_15
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 139
+        width: 36
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c49dcf18058389f0800000000000000
+      internalID: -467383666376600382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_16
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 139
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc75a3710bfd01130800000000000000
+      internalID: 3535571654882777035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_17
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 139
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd09a27fc3afba340800000000000000
+      internalID: 4876266161310437596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_18
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 139
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0be495bbce46bae0800000000000000
+      internalID: -1533951986241311990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_19
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 139
+        width: 57
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9194eb50003794e30800000000000000
+      internalID: 4488244947584960793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_20
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 132
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9c534444a330d90800000000000000
+      internalID: -7132793319948170823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 82
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d279e000e44d59f0800000000000000
+      internalID: -478150256552742190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_22
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 81
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f23fed3505d94f90800000000000000
+      internalID: -6968804729888492807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_23
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 82
+        width: 32
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601888ff8c8997230800000000000000
+      internalID: 3637106163126403334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_24
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 81
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a72161530aeb7950800000000000000
+      internalID: 6448004591482120104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_25
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 81
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8353f64aef1299cb0800000000000000
+      internalID: -4856813345578207944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_26
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 82
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 826a5091148c16120800000000000000
+      internalID: 2405423857910785576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_27
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 82
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03be5c99775595250800000000000000
+      internalID: 5933867956206693168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_28
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 82
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea9a09cca2152c50800000000000000
+      internalID: 6639733758944254696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_29
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 81
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe991686e1ef0cf00800000000000000
+      internalID: 1135186512651065839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_30
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 81
+        width: 35
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e359180d1b9bda0800000000000000
+      internalID: -5928511925371191684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_31
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 81
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 266ff04f87a8742c0800000000000000
+      internalID: -4447433854909680030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_32
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 81
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8eb439e7aae6ccc0800000000000000
+      internalID: -3691004837690556790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_33
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 74
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7419470a30f1156e0800000000000000
+      internalID: -1850663871435206329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_34
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 82
+        width: 49
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94466256d2b9f00f0800000000000000
+      internalID: -1148528760683338679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_35
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 82
+        width: 18
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9e41d882cbfba50800000000000000
+      internalID: 6539152066316921263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_36
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 82
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d17ffebf50584d1e0800000000000000
+      internalID: -2173966459364968675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_37
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 81
+        width: 39
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4fbad582da1b5860800000000000000
+      internalID: 7519633494316334922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_38
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 81
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290906afaded6c900800000000000000
+      internalID: 704495423814930578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_39
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 81
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6db34c1c95aa79b0800000000000000
+      internalID: -5081567139626500756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_40
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 81
+        width: 28
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2346f1103a8a98e60800000000000000
+      internalID: 7965082834033402930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_41
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 82
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48dd0fa97c7701620800000000000000
+      internalID: 2742823872250305924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_42
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 82
+        width: 31
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8769bdc2fc1d2d0800000000000000
+      internalID: -3255593264042575656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_43
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 81
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeda64f45b70deed0800000000000000
+      internalID: -2383240152508617238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_44
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 82
+        width: 50
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f77809cd97f03dac0800000000000000
+      internalID: -3831701841896241281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_45
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 82
+        width: 17
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29353d1d23b6e0800800000000000000
+      internalID: 580519267990197138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_46
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 81
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769dae5d9f228bee0800000000000000
+      internalID: -1245206840536802969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_47
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 82
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7ecb5287e9b73d0800000000000000
+      internalID: -3207796070704945217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_48
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 74
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6536b65bfa2bd5a0800000000000000
+      internalID: -6495550778571868818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_49
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 24
+        width: 67
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a60c3b732de0a550800000000000000
+      internalID: 6170192226144749223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_50
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 24
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72e8e8e171824ee0800000000000000
+      internalID: -1278317017980935557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_51
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 24
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38c9cb9ff7021eb0800000000000000
+      internalID: -4750725862510704579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_52
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 24
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6853547d948fc3270800000000000000
+      internalID: 8231727214954362246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_53
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 24
+        width: 27
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4160586125172a0800000000000000
+      internalID: -6741516910522395406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_54
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 24
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e359b888aeff3a0800000000000000
+      internalID: -6629322254287815162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_55
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 24
+        width: 35
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc3f095c32ece5780800000000000000
+      internalID: -8692283577744690225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_56
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 24
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dae3f082506296e0800000000000000
+      internalID: -1832296190919316780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_57
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 24
+        width: 70
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c4e2475b6761500800000000000000
+      internalID: 366610941387623492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_58
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 24
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53e5784f2895cac0800000000000000
+      internalID: -3835492178789538979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_59
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 25
+        width: 36
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7378200abe87f1dc0800000000000000
+      internalID: -3666078618259126473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_60
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 24
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e70f5528b8340240800000000000000
+      internalID: 4756989469962209250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_61
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 24
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5bcd8dd8603b170800000000000000
+      internalID: 8192899353415562706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_62
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 25
+        width: 35
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a33e4e01833b1e0800000000000000
+      internalID: -2183339749133829620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_63
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 24
+        width: 36
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97fa8b4fff4c16780800000000000000
+      internalID: -8691449202246897799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_64
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 24
+        width: 33
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe6bf424b2cd6d10800000000000000
+      internalID: 2120565078531731130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_65
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 24
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f31fe08b2b578440800000000000000
+      internalID: 4938015758839911412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_66
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 24
+        width: 67
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526631928d236b5c0800000000000000
+      internalID: -4200113698492946907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_67
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 23
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af0785ee49fa5d570800000000000000
+      internalID: 8490885726665732346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_68
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 24
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90fc63cbedd5df1e0800000000000000
+      internalID: -2162469034846138615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_69
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 24
+        width: 32
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb187cdd577f04550800000000000000
+      internalID: 6143181977337430463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_70
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 24
+        width: 40
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9a29e4c4e58121e0800000000000000
+      internalID: -2224349523341661542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: nomes_71
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 24
+        width: 58
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c5105917bc63f50800000000000000
+      internalID: 6860894771037166613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      nomes_0: -5881151170061059174
+      nomes_1: -9073022847843240125
+      nomes_10: -4995512936779943051
+      nomes_11: -6026316105994041794
+      nomes_12: -8863635862198065231
+      nomes_13: 8077435382622543069
+      nomes_14: 2210674148353877710
+      nomes_15: -467383666376600382
+      nomes_16: 3535571654882777035
+      nomes_17: 4876266161310437596
+      nomes_18: -1533951986241311990
+      nomes_19: 4488244947584960793
+      nomes_2: -869146098391205776
+      nomes_20: -7132793319948170823
+      nomes_21: -478150256552742190
+      nomes_22: -6968804729888492807
+      nomes_23: 3637106163126403334
+      nomes_24: 6448004591482120104
+      nomes_25: -4856813345578207944
+      nomes_26: 2405423857910785576
+      nomes_27: 5933867956206693168
+      nomes_28: 6639733758944254696
+      nomes_29: 1135186512651065839
+      nomes_3: -3498114820322920780
+      nomes_30: -5928511925371191684
+      nomes_31: -4447433854909680030
+      nomes_32: -3691004837690556790
+      nomes_33: -1850663871435206329
+      nomes_34: -1148528760683338679
+      nomes_35: 6539152066316921263
+      nomes_36: -2173966459364968675
+      nomes_37: 7519633494316334922
+      nomes_38: 704495423814930578
+      nomes_39: -5081567139626500756
+      nomes_4: 301820084979222700
+      nomes_40: 7965082834033402930
+      nomes_41: 2742823872250305924
+      nomes_42: -3255593264042575656
+      nomes_43: -2383240152508617238
+      nomes_44: -3831701841896241281
+      nomes_45: 580519267990197138
+      nomes_46: -1245206840536802969
+      nomes_47: -3207796070704945217
+      nomes_48: -6495550778571868818
+      nomes_49: 6170192226144749223
+      nomes_5: 2982959037950301928
+      nomes_50: -1278317017980935557
+      nomes_51: -4750725862510704579
+      nomes_52: 8231727214954362246
+      nomes_53: -6741516910522395406
+      nomes_54: -6629322254287815162
+      nomes_55: -8692283577744690225
+      nomes_56: -1832296190919316780
+      nomes_57: 366610941387623492
+      nomes_58: -3835492178789538979
+      nomes_59: -3666078618259126473
+      nomes_6: -3672006591342308262
+      nomes_60: 4756989469962209250
+      nomes_61: 8192899353415562706
+      nomes_62: -2183339749133829620
+      nomes_63: -8691449202246897799
+      nomes_64: 2120565078531731130
+      nomes_65: 4938015758839911412
+      nomes_66: -4200113698492946907
+      nomes_67: 8490885726665732346
+      nomes_68: -2162469034846138615
+      nomes_69: 6143181977337430463
+      nomes_7: -3571355469717520518
+      nomes_70: -2224349523341661542
+      nomes_71: 6860894771037166613
+      nomes_8: -894308220074397816
+      nomes_9: -3384238226992694977
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

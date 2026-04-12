@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: d5e6b80a4a9bf48468d3741bceccbbbb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 901905158662420975
+    second: mudar_original_0
+  - first:
+      213: 5736702372893001287
+    second: mudar_original_1
+  - first:
+      213: 748072317570476107
+    second: mudar_original_2
+  - first:
+      213: 3024929071535846780
+    second: mudar_original_3
+  - first:
+      213: 7147460851506706110
+    second: mudar_original_4
+  - first:
+      213: -7788072721634498867
+    second: mudar_original_5
+  - first:
+      213: -2789814128397654909
+    second: mudar_original_6
+  - first:
+      213: 2346876587119533620
+    second: mudar_original_7
+  - first:
+      213: -8559853883819483798
+    second: mudar_original_8
+  - first:
+      213: 3682910855298467772
+    second: mudar_original_9
+  - first:
+      213: -7589025283907989722
+    second: mudar_original_10
+  - first:
+      213: 4704782325712508198
+    second: mudar_original_11
+  - first:
+      213: 8203802347833678645
+    second: mudar_original_12
+  - first:
+      213: -3090832331658983901
+    second: mudar_original_13
+  - first:
+      213: -9166608366609246885
+    second: mudar_original_14
+  - first:
+      213: -5402819662007924323
+    second: mudar_original_15
+  - first:
+      213: 5967212890001148814
+    second: mudar_original_16
+  - first:
+      213: -8187960169277290755
+    second: mudar_original_17
+  - first:
+      213: -1512445150327361027
+    second: mudar_original_18
+  - first:
+      213: -2572717400293883048
+    second: mudar_original_19
+  - first:
+      213: -8516838259607227543
+    second: mudar_original_20
+  - first:
+      213: 4179632134606236826
+    second: mudar_original_21
+  - first:
+      213: 7237635456225032378
+    second: mudar_original_22
+  - first:
+      213: -7574921350151758113
+    second: mudar_original_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mudar_original_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 113
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe97a2b96f5348c00800000000000000
+      internalID: 901905158662420975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 113
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7468d6ee96cdc9f40800000000000000
+      internalID: 5736702372893001287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 113
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4867133fcfa16a00800000000000000
+      internalID: 748072317570476107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 113
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7575abb6f4baf920800000000000000
+      internalID: 3024929071535846780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 114
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6711c86c1e03360800000000000000
+      internalID: 7147460851506706110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 113
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc6e0166f153be390800000000000000
+      internalID: -7788072721634498867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 114
+        width: 70
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 384ed7fc4d69849d0800000000000000
+      internalID: -2789814128397654909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 114
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ed0fa52d7c19020800000000000000
+      internalID: 2346876587119533620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_8
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 113
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6d11b5ae3a453980800000000000000
+      internalID: -8559853883819483798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_9
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 113
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb7ce75f8e35c1330800000000000000
+      internalID: 3682910855298467772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_10
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 113
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62fc43176bd5ea690800000000000000
+      internalID: -7589025283907989722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62551a5299eba4140800000000000000
+      internalID: 4704782325712508198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 24
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53b542e05c2c9d170800000000000000
+      internalID: 8203802347833678645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 24
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3268c2bce582b15d0800000000000000
+      internalID: -3090832331658983901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 24
+        width: 70
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55d121e14aa9c080800000000000000
+      internalID: -9166608366609246885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_15
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 23
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99858c84245505b0800000000000000
+      internalID: -5402819662007924323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 24
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b86aff18ccfc250800000000000000
+      internalID: 5967212890001148814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df60e239b958e5e80800000000000000
+      internalID: -8187960169277290755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 25
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df1b9782627b20be0800000000000000
+      internalID: -1512445150327361027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_19
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8534400c72fdb4cd0800000000000000
+      internalID: -2572717400293883048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 24
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 963b7ae1abc1ec980800000000000000
+      internalID: -8516838259607227543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_21
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c23032849010a30800000000000000
+      internalID: 4179632134606236826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_22
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 38
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8b01ec91f317460800000000000000
+      internalID: 7237635456225032378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_original_23
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 25
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fde9eaa6a2970e690800000000000000
+      internalID: -7574921350151758113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mudar_original_0: 901905158662420975
+      mudar_original_1: 5736702372893001287
+      mudar_original_10: -7589025283907989722
+      mudar_original_11: 4704782325712508198
+      mudar_original_12: 8203802347833678645
+      mudar_original_13: -3090832331658983901
+      mudar_original_14: -9166608366609246885
+      mudar_original_15: -5402819662007924323
+      mudar_original_16: 5967212890001148814
+      mudar_original_17: -8187960169277290755
+      mudar_original_18: -1512445150327361027
+      mudar_original_19: -2572717400293883048
+      mudar_original_2: 748072317570476107
+      mudar_original_20: -8516838259607227543
+      mudar_original_21: 4179632134606236826
+      mudar_original_22: 7237635456225032378
+      mudar_original_23: -7574921350151758113
+      mudar_original_3: 3024929071535846780
+      mudar_original_4: 7147460851506706110
+      mudar_original_5: -7788072721634498867
+      mudar_original_6: -2789814128397654909
+      mudar_original_7: 2346876587119533620
+      mudar_original_8: -8559853883819483798
+      mudar_original_9: 3682910855298467772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

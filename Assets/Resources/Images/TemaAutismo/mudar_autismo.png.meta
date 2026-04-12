@@ -1,0 +1,767 @@
+fileFormatVersion: 2
+guid: bd85c0a00d9567449ab35f2050c270fb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6671957299260701353
+    second: mudar_autismo_0
+  - first:
+      213: -7046138296066959514
+    second: mudar_autismo_1
+  - first:
+      213: 6763106501307832841
+    second: mudar_autismo_2
+  - first:
+      213: -1449279734153644188
+    second: mudar_autismo_3
+  - first:
+      213: 1834963340677034431
+    second: mudar_autismo_4
+  - first:
+      213: -7940845731196460336
+    second: mudar_autismo_5
+  - first:
+      213: 3197953684487165484
+    second: mudar_autismo_6
+  - first:
+      213: -4644742586862553198
+    second: mudar_autismo_7
+  - first:
+      213: -5241092391634207328
+    second: mudar_autismo_8
+  - first:
+      213: 5949923868605898736
+    second: mudar_autismo_9
+  - first:
+      213: -3646590089908100498
+    second: mudar_autismo_10
+  - first:
+      213: 1924118811450610528
+    second: mudar_autismo_11
+  - first:
+      213: 5900897501450204404
+    second: mudar_autismo_12
+  - first:
+      213: 611758463497009777
+    second: mudar_autismo_13
+  - first:
+      213: 628035335408158935
+    second: mudar_autismo_14
+  - first:
+      213: 4270128482684826244
+    second: mudar_autismo_15
+  - first:
+      213: -1086905467278981419
+    second: mudar_autismo_16
+  - first:
+      213: 6743113048220452718
+    second: mudar_autismo_17
+  - first:
+      213: -4505823493405198381
+    second: mudar_autismo_18
+  - first:
+      213: -667357916784639392
+    second: mudar_autismo_19
+  - first:
+      213: 2571091680933156227
+    second: mudar_autismo_20
+  - first:
+      213: 5905966921473458209
+    second: mudar_autismo_21
+  - first:
+      213: -9170484475735311757
+    second: mudar_autismo_22
+  - first:
+      213: 4534631532545369255
+    second: mudar_autismo_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mudar_autismo_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 113
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755cdf49f227863a0800000000000000
+      internalID: -6671957299260701353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_1
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 113
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66717a04d86173e90800000000000000
+      internalID: -7046138296066959514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_2
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 113
+        width: 44
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90a969cc7816bdd50800000000000000
+      internalID: 6763106501307832841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_3
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 113
+        width: 39
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4677999a2cf13ebe0800000000000000
+      internalID: -1449279734153644188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_4
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 114
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb13be0bf69177910800000000000000
+      internalID: 1834963340677034431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_5
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 113
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2abdf31e27cc190800000000000000
+      internalID: -7940845731196460336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 114
+        width: 70
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c26520cbee9616c20800000000000000
+      internalID: 3197953684487165484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 114
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 297bde4e93f8a8fb0800000000000000
+      internalID: -4644742586862553198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_8
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 113
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0adf3a10d36e347b0800000000000000
+      internalID: -5241092391634207328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_9
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 113
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff5fd40c30629250800000000000000
+      internalID: 5949923868605898736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_10
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 113
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e62619932a5b46dc0800000000000000
+      internalID: -3646590089908100498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_11
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06319265dd7d3ba10800000000000000
+      internalID: 1924118811450610528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_12
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 24
+        width: 45
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f4fde5630334e150800000000000000
+      internalID: 5900897501450204404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 24
+        width: 39
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17af311d4176d7800800000000000000
+      internalID: 611758463497009777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_14
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 24
+        width: 70
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d885616fca37b800800000000000000
+      internalID: 628035335408158935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_15
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 23
+        width: 50
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482f4bb1b3b824b30800000000000000
+      internalID: 4270128482684826244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_16
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 24
+        width: 50
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d608667c398ae0f0800000000000000
+      internalID: -1086905467278981419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e674b7f3799549d50800000000000000
+      internalID: 6743113048220452718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_18
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 25
+        width: 42
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d739f6d7691871c0800000000000000
+      internalID: -4505823493405198381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_19
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062c100b2811db6f0800000000000000
+      internalID: -667357916784639392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_20
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 24
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3859bf6f24a5ea320800000000000000
+      internalID: 2571091680933156227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_21
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 25
+        width: 50
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12002a9bf9536f150800000000000000
+      internalID: 5905966921473458209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_22
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 38
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37aff85e4f4ebb080800000000000000
+      internalID: -9170484475735311757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mudar_autismo_23
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 25
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4e6a47a5f3eee30800000000000000
+      internalID: 4534631532545369255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mudar_autismo_0: -6671957299260701353
+      mudar_autismo_1: -7046138296066959514
+      mudar_autismo_10: -3646590089908100498
+      mudar_autismo_11: 1924118811450610528
+      mudar_autismo_12: 5900897501450204404
+      mudar_autismo_13: 611758463497009777
+      mudar_autismo_14: 628035335408158935
+      mudar_autismo_15: 4270128482684826244
+      mudar_autismo_16: -1086905467278981419
+      mudar_autismo_17: 6743113048220452718
+      mudar_autismo_18: -4505823493405198381
+      mudar_autismo_19: -667357916784639392
+      mudar_autismo_2: 6763106501307832841
+      mudar_autismo_20: 2571091680933156227
+      mudar_autismo_21: 5905966921473458209
+      mudar_autismo_22: -9170484475735311757
+      mudar_autismo_23: 4534631532545369255
+      mudar_autismo_3: -1449279734153644188
+      mudar_autismo_4: 1834963340677034431
+      mudar_autismo_5: -7940845731196460336
+      mudar_autismo_6: 3197953684487165484
+      mudar_autismo_7: -4644742586862553198
+      mudar_autismo_8: -5241092391634207328
+      mudar_autismo_9: 5949923868605898736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

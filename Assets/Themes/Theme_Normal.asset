@@ -1,0 +1,132 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dcc47b4a26ce314984348ba00c824b6, type: 3}
+  m_Name: Theme_Normal
+  m_EditorClassIdentifier: Assembly-CSharp::ThemeData
+  acoes: {fileID: 16399310237537138, guid: 33f24afeff1188a42b03da4e40a08052, type: 3}
+  acoesSize: {x: 460.96, y: 155.75}
+  alimentos: {fileID: 21300000, guid: cd2f2b19e95b6a943aaafe342c75833f, type: 3}
+  alimentosSize: {x: 668.58, y: 237.41}
+  apoio: {fileID: 21300000, guid: bce440658e01f28459b6dcbcb5c756c3, type: 3}
+  apoioSize: {x: 452, y: 160}
+  avancar: {fileID: 21300000, guid: 10e79ec1d4ffde64fa72d47a6be25430, type: 3}
+  avancarSize: {x: 224, y: 188}
+  background: {fileID: 21300000, guid: e1451e1cf73059e48bd62170a3a72a2d, type: 3}
+  backgroundSize: {x: 3034.13, y: 1680.73}
+  botaoTutorial: {fileID: 6276859964815518809, guid: 64dfd4627796e0e41afe0e87da23eb27, type: 3}
+  botaoTutorialSize: {x: 367.2, y: 118.78}
+  configuracao: {fileID: 21300000, guid: 644c9ebb3b3aa634bb3b1d09a0786740, type: 3}
+  configuracaoSize: {x: 164.21, y: 164.21}
+  cotidiano: {fileID: 21300000, guid: be7d07f598e5d064d8ca4812dc6ab7bc, type: 3}
+  cotidianoSize: {x: 530.2, y: 206.85}
+  creditos: {fileID: 21300000, guid: 29d840d45ed93d54b8e9b50d9ad14cd9, type: 3}
+  creditosSize: {x: 776, y: 240}
+  diversao: {fileID: 7754012323251591114, guid: aea037e41653ec546b1260de1f1a7979, type: 3}
+  diversaoSize: {x: 502.43, y: 156.15}
+  equipe: {fileID: 21300000, guid: af269092050142547ac3931a7946bc5c, type: 3}
+  equipeSize: {x: 968, y: 284}
+  estrela: {fileID: 21300000, guid: e9c67278332f3ae47b18d5e3fbe6cdfb, type: 3}
+  estrelaSize: {x: 628.55, y: 628.55}
+  higiene: {fileID: 21300000, guid: dc168e4684ef9ea43952e652925c83f1, type: 3}
+  higieneSize: {x: 547.73, y: 213.69}
+  informacao: {fileID: 21300000, guid: 9bb7ff0f5452c8e43bce30e177653d23, type: 3}
+  informacaoSize: {x: 204.85, y: 206.02}
+  instituicoes: {fileID: 0}
+  instituicoesSize: {x: 0, y: 0}
+  interrogacao: {fileID: 21300000, guid: 39dd04f5ed75860409b9d368a4429897, type: 3}
+  interrogacaoSize: {x: 436.12, y: 444.76}
+  menuPrincipal: {fileID: 21300000, guid: c02e06647733a5d41955889d58f7e9c7, type: 3}
+  menuPrincipalSize: {x: 1211.3, y: 478.94}
+  musica: {fileID: 21300000, guid: 3621cd7fbc2aa0740b0375c44ba29455, type: 3}
+  musicaSize: {x: 304, y: 128}
+  muitoBem: {fileID: 21300000, guid: 12ffbfc934d7535408abbfa3707424d0, type: 3}
+  muitoBemSize: {x: 1216.36, y: 296.05}
+  nomes: {fileID: 0}
+  nomesSize: {x: 0, y: 0}
+  parceria: {fileID: 21300000, guid: fc802d356c8b84a43abb283885d955a7, type: 3}
+  parceriaSize: {x: 860, y: 160}
+  parcerias: {fileID: 0}
+  parceriasSize: {x: 0, y: 0}
+  playButton: {fileID: 21300000, guid: be334fa271c98ac4ea2751791a2adcb1, type: 3}
+  playButtonSize: {x: 468, y: 476}
+  quaseLa: {fileID: 21300000, guid: 7db77d6ad9fd2b24daa83ebc98050609, type: 3}
+  quaseLaSize: {x: 932.15, y: 294.2}
+  recomecar: {fileID: 0}
+  recomecarSize: {x: 0, y: 0}
+  tenteNovamente: {fileID: 21300000, guid: a288fd7a48b223e41bf27fbe93e1ceda, type: 3}
+  tenteNovamenteSize: {x: 1483.8, y: 279.3}
+  titleInterrogacao: {fileID: 21300000, guid: 39dd04f5ed75860409b9d368a4429897, type: 3}
+  titleInterrogacaoSize: {x: 436.12, y: 444.76}
+  titlePara: {fileID: 0}
+  titleParaSize: {x: 0, y: 0}
+  titleQue: {fileID: 0}
+  titleQueSize: {x: 0, y: 0}
+  titleServe: {fileID: 0}
+  titleServeSize: {x: 0, y: 0}
+  tutorial: {fileID: 21300000, guid: 13e66d51ee7e02f40acf933ee1c17dbe, type: 3}
+  tutorialSize: {x: 911.17, y: 275.99}
+  tutorialPlay: {fileID: 21300000, guid: be334fa271c98ac4ea2751791a2adcb1, type: 3}
+  tutorialPlaySize: {x: 666.69, y: 638.7}
+  tutorialVoltar: {fileID: 21300000, guid: ca7daed9786b1ee43a7b2371fff87f7b, type: 3}
+  tutorialVoltarSize: {x: 198.58, y: 199.76}
+  volume: {fileID: 21300000, guid: ed983e42d2c831e45b0063e8f3c45f8d, type: 3}
+  volumeSize: {x: 578.26, y: 168.79}
+  volumeGeral: {fileID: 21300000, guid: 6f67f771922bfd9438e69e8dea5b16ce, type: 3}
+  volumeGeralSize: {x: 764, y: 128}
+  volumeLevel: {fileID: 0}
+  volumeLevelSize: {x: 0, y: 0}
+  voltar: {fileID: 21300000, guid: ca7daed9786b1ee43a7b2371fff87f7b, type: 3}
+  voltarSize: {x: 167, y: 168}
+  web: {fileID: 21300000, guid: cb8d38d13af27c4458a8947864a3baab, type: 3}
+  webSize: {x: 162.24, y: 162.24}
+  instagram: {fileID: 21300000, guid: 336fca8d6f9d275478f8faa2edaee508, type: 3}
+  instagramSize: {x: 138.12, y: 138.12}
+  interrogacaoParaqueserve: {fileID: 21300000, guid: 49ac07fecf2c67c449589fbac7a5bdc9, type: 3}
+  interrogacaoParaqueserveSize: {x: 368.81, y: 366.82}
+  estrelaEsquerda: {fileID: 21300000, guid: 0dc234ec7bf49ed438bb1a0d99ed88b9, type: 3}
+  estrelaEsquerdaSize: {x: 487.6, y: 487.6}
+  estrelaDireita: {fileID: 21300000, guid: e9c67278332f3ae47b18d5e3fbe6cdfb, type: 3}
+  estrelaDireitaSize: {x: 487.6, y: 487.6}
+  conjuntoAcao: {fileID: 2563189119693027931, guid: 6c516bbbc95129c46933087338d6ad35, type: 3}
+  conjuntoAcaoSize: {x: 437.51, y: 497.1}
+  conjuntoAlimentos: {fileID: 6968945901534953655, guid: 5cf0b38f20b3226438fd3ef5512dd7ae, type: 3}
+  conjuntoAlimentosSize: {x: 543.72, y: 483.18}
+  conjuntoCotidiano: {fileID: 8661908165099250549, guid: 40efd7cbb1a1c4a4ca23fb65a7dc5eed, type: 3}
+  conjuntoCotidianoSize: {x: 514.31, y: 485.22}
+  conjuntoDiversao: {fileID: 8285840272346981710, guid: 5ad9b2d610791bf46b9059fbb23056e6, type: 3}
+  conjuntoDiversaoSize: {x: 465.37, y: 485.2}
+  conjuntoHigiene: {fileID: -982813083862945867, guid: f236de8aa6558884d8cd3d206b91d58c, type: 3}
+  conjuntoHigieneSize: {x: 431.93, y: 490.77}
+  fundoAudio: {fileID: -6753202841009803674, guid: 804ddc710f8e0f94aa1f1d1aae9834ca, type: 3}
+  fundoAudioSize: {x: 485.89, y: 714.65}
+  fundoItem: {fileID: 21300000, guid: 553dca9b27815ab44b0177ba062a69ac, type: 3}
+  fundoItemSize: {x: 360, y: 360}
+  erradoSelectLevel: {fileID: 21300000, guid: aaa4dc4e0faac0641b021ce4abb8218b, type: 3}
+  erradoSelectLevelSize: {x: 110, y: 110}
+  quaseSelectLevel: {fileID: 21300000, guid: 3522b3ff01748b04582840163c4fca12, type: 3}
+  quaseSelectLevelSize: {x: 110, y: 110}
+  certoSelectLevel: {fileID: 21300000, guid: c4c0fdf8b39d9054c83d62ee289f6773, type: 3}
+  certoSelectLevelSize: {x: 140, y: 140}
+  paraqueserveDesativado: {fileID: -7118229947742921975, guid: 11962fc188f0062459538b176d9c6568, type: 3}
+  paraqueserveDesativadoSize: {x: 319.15, y: 317.35}
+  tema: {fileID: 21300000, guid: 1736b59fc2348cd4282fa3da129611d0, type: 3}
+  temaSize: {x: 390.37, y: 153.66}
+  handleVolume: {fileID: 21300000, guid: 77931ba5147d2fc4da3a7bd5693f02ae, type: 3}
+  handleVolumeSize: {x: 90.43, y: 89.99}
+  titleConfirm: {fileID: 21300000, guid: d5e6b80a4a9bf48468d3741bceccbbbb, type: 3}
+  titleConfirmSize: {x: 706.7, y: 222.14}
+  iconConfirm: {fileID: 21300000, guid: c4c0fdf8b39d9054c83d62ee289f6773, type: 3}
+  iconConfirmSize: {x: 328, y: 320}
+  iconCancel: {fileID: 21300000, guid: aaa4dc4e0faac0641b021ce4abb8218b, type: 3}
+  iconCancelSize: {x: 246.86, y: 244.3}
+  interrogacaoLoader: {fileID: 21300000, guid: 39dd04f5ed75860409b9d368a4429897, type: 3}
+  interrogacaoLoaderSize: {x: 397.9372, y: 397.9372}
