@@ -7,7 +7,7 @@ public class RotateImage : MonoBehaviour
     private Animator animator;
     private bool animacaoAtiva = true;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         animator = GetComponent<Animator>();

@@ -1,7 +1,7 @@
-    using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]   
+[RequireComponent(typeof(Image))]
 public class ThemeSpriteApplier : MonoBehaviour
 {
     //ADICIONAR AQUI
