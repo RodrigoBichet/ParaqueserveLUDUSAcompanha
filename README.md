@@ -3,7 +3,8 @@
 # LUDUS Monitor SDK
 
 > Parte do projeto **LUDUS Acompanha** — Mestrado em Ciência da Computação, UFPel (2026)  
-> Autor: Rodrigo Leitzke Bichet
+> Autor: Rodrigo Leitzke Bichet  
+> Orientador: Prof. Dr. Leomar Soares da Rosa Júnior
 
 ---
 
@@ -38,13 +39,13 @@ Unity (C# SDK) → JSON → Node.js + Express → MongoDB → API REST → Pytho
 Assets/
 ├── Scripts/
 │   └── LUDUS_SDK/
-│       ├── LudusConfig.cs        ← Configuração (ScriptableObject)
-│       ├── LudusSession.cs       ← Modelo de dados da sessão
-│       ├── LudusMonitor.cs       ← Singleton orquestrador
-│       ├── LudusGameEvents.cs    ← API pública do SDK ✅
-│       ├── LudusInputTracker.cs  ← Captura de mouse/touch (em desenvolvimento)
-│       ├── LudusClickable.cs     ← Nomeação semântica de objetos (em desenvolvimento)
-│       └── LudusExporter.cs      ← Serialização e envio HTTP (em desenvolvimento)
+│       ├── LudusConfig.cs        ← Configuração (ScriptableObject)          ✅
+│       ├── LudusSession.cs       ← Modelo de dados da sessão                ✅
+│       ├── LudusMonitor.cs       ← Singleton orquestrador                   ✅
+│       ├── LudusGameEvents.cs    ← API pública do SDK                       ✅
+│       ├── LudusInputTracker.cs  ← Captura global de mouse/touch            ✅
+│       ├── LudusClickable.cs     ← Nomeação semântica de objetos            ✅
+│       └── LudusExporter.cs      ← Serialização e envio HTTP                🔜
 └── Resources/
     └── LUDUS_SDK/
         └── LudusConfig.asset     ← Asset de configuração (editável no Inspector)
@@ -56,7 +57,7 @@ Assets/
 
 1. Copie a pasta `Assets/Scripts/LUDUS_SDK/` para dentro do projeto Unity de destino
 2. Copie a pasta `Assets/Resources/LUDUS_SDK/` para dentro do projeto
-3. Crie um GameObject vazio na primeira cena do jogo e adicione o componente `LudusMonitor`
+3. Crie um GameObject vazio na primeira cena do jogo e adicione os componentes `LudusMonitor` e `LudusInputTracker`
 4. Configure o `LudusConfig.asset` em `Resources/LUDUS_SDK/` com os dados do jogo
 
 ---
@@ -110,6 +111,19 @@ LudusGameEvents.WrongMatch("bola", "maçã");
 LudusGameEvents.PhaseCompleted(acertos: 3, erros: 1, timeSeconds: 45.2f, stars: 2);
 ```
 
+### 3. Nomear objetos interativos (LudusClickable)
+
+Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo do jogo e defina o `elementName`:
+
+| Objeto no jogo               | elementName sugerido      |
+| ---------------------------- | ------------------------- |
+| Botão da categoria Alimentos | `btn_categoria_alimentos` |
+| Imagem da opção maçã         | `img_opcao_maca`          |
+| Botão jogar do menu          | `btn_menu_jogar`          |
+| Imagem alvo do pareamento    | `img_alvo`                |
+
+O `LudusInputTracker` detecta automaticamente o clique e registra o nome sem nenhuma linha de código extra.
+
 ---
 
 ## Eventos semânticos (Para Que Serve?)
@@ -129,15 +143,15 @@ LudusGameEvents.PhaseCompleted(acertos: 3, erros: 1, timeSeconds: 45.2f, stars: 
 
 ## Status do desenvolvimento
 
-| Componente           | Status                |
-| -------------------- | --------------------- |
-| LudusConfig.cs       | ✅ Concluído          |
-| LudusSession.cs      | ✅ Concluído          |
-| LudusMonitor.cs      | ✅ Concluído          |
-| LudusGameEvents.cs   | ✅ Concluído          |
-| LudusInputTracker.cs | 🔧 Em desenvolvimento |
-| LudusClickable.cs    | 🔧 Em desenvolvimento |
-| LudusExporter.cs     | 🔜 Pendente           |
+| Componente           | Status       |
+| -------------------- | ------------ |
+| LudusConfig.cs       | ✅ Concluído |
+| LudusSession.cs      | ✅ Concluído |
+| LudusMonitor.cs      | ✅ Concluído |
+| LudusGameEvents.cs   | ✅ Concluído |
+| LudusInputTracker.cs | ✅ Concluído |
+| LudusClickable.cs    | ✅ Concluído |
+| LudusExporter.cs     | 🔜 Pendente  |
 
 ---
 

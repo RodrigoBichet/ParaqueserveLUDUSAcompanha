@@ -5,6 +5,27 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.3.0] — 2026-04-14
+
+### Adicionado
+
+- `LudusClickable.cs` — componente de nomeação semântica de objetos
+    - Campo `elementName` para identificar botões e objetos interativos nos dados coletados
+    - Compatível com qualquer GameObject (UI ou mundo 2D)
+- `LudusInputTracker.cs` — captura global de input
+    - Detecção de cliques via mouse (WebGL/Editor) e toque via touch (Android)
+    - Tratamento separado para cliques em UI (`EventSystem`) e objetos 2D do mundo (`Physics2D.Raycast`)
+    - Busca `LudusClickable` no objeto clicado e em seus pais na hierarquia (`GetComponentInParent`)
+    - Registro do caminho do mouse/dedo a cada `0.1s` para geração de heatmap
+    - Só processa input quando há sessão ativa — sem overhead desnecessário
+
+### Testado
+
+- Clique em botão UI identificado corretamente com nome semântico e posição
+- Log de debug exibindo elemento, coordenadas X e Y
+
+---
+
 ## [0.2.0] — 2026-04-13
 
 ### Adicionado
@@ -65,7 +86,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[0.3.0]` — `LudusInputTracker.cs` + `LudusClickable.cs`: captura global de input e nomeação semântica
 - `[0.4.0]` — `LudusExporter.cs`: serialização JSON e envio HTTP com fallback offline
 - `[0.5.0]` — Cena de identificação do jogador integrada ao SDK
 - `[1.0.0]` — SDK completo integrado ao _Para Que Serve?_ e testado em ambiente real
