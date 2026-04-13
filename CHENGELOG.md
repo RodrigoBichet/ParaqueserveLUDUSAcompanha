@@ -5,6 +5,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.4.0] — 2026-04-14 — SDK Completo 🎉
+
+### Adicionado
+
+- `LudusExporter.cs` — serialização e envio de sessões ao backend
+    - `Exportar(session)` — serializa a sessão em JSON via `JsonUtility.ToJson()` e envia via HTTP POST
+    - `EnviarParaBackend()` — Coroutine com `UnityWebRequest` para envio assíncrono sem travar o jogo
+    - `SalvarLocalmente()` — fallback offline: salva JSON em `persistentDataPath/ludus_offline/` com UUID como nome do arquivo
+    - `TentarReenviarPendentes()` — roda ao iniciar o jogo, reenvia arquivos pendentes com pausa de 0.5s entre cada um
+    - `RemoverArquivoFallback()` — limpa o arquivo local após reenvio bem-sucedido
+- `LudusMonitor.cs` atualizado — `EndSession()` agora aciona `LudusExporter.Instance.Exportar()` diretamente
+
+### Testado
+
+- Fallback funcionando: sessão salva localmente em `persistentDataPath/ludus_offline/` quando backend está offline
+- Arquivo nomeado corretamente com UUID da sessão
+- Reenvio automático de pendentes ao iniciar o jogo
+
+### Marco
+
+- **SDK completo** — todos os 7 componentes implementados e testados
+
+---
+
 ## [0.3.0] — 2026-04-14
 
 ### Adicionado
@@ -17,12 +41,11 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
     - Tratamento separado para cliques em UI (`EventSystem`) e objetos 2D do mundo (`Physics2D.Raycast`)
     - Busca `LudusClickable` no objeto clicado e em seus pais na hierarquia (`GetComponentInParent`)
     - Registro do caminho do mouse/dedo a cada `0.1s` para geração de heatmap
-    - Só processa input quando há sessão ativa — sem overhead desnecessário
+    - Só processa input quando há sessão ativa
 
 ### Testado
 
 - Clique em botão UI identificado corretamente com nome semântico e posição
-- Log de debug exibindo elemento, coordenadas X e Y
 
 ---
 
@@ -31,22 +54,14 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 ### Adicionado
 
 - `LudusGameEvents.cs` — API pública estática do SDK
-    - `CategorySelected(category)` — criança escolhe uma categoria
-    - `PhaseStarted(targetItem, options[])` — nova fase iniciada com item-alvo e opções
-    - `DragAttempt(draggedItem, targetItem, correct)` — criança arrasta qualquer item
-    - `CorrectMatch(item, timeSeconds)` — pareamento correto com tempo da fase
-    - `WrongMatch(draggedItem, expectedItem)` — pareamento incorreto
-    - `PhaseCompleted(acertos, erros, timeSeconds, stars)` — resumo de desempenho da fase
-    - `SessionEnded()` — encerra sessão e aciona o Monitor
-    - `ValidarMonitor()` — verificação interna antes de cada chamada com mensagens de erro claras
-    - Payloads em JSON com `InvariantCulture` nos floats (ponto decimal garantido)
-    - Atualização automática de `totalCorrect` e `totalWrong` nas métricas da sessão
+    - `CategorySelected`, `PhaseStarted`, `DragAttempt`, `CorrectMatch`, `WrongMatch`, `PhaseCompleted`, `SessionEnded`
+    - `ValidarMonitor()` — verificação interna antes de cada chamada
+    - Payloads em JSON com `InvariantCulture` nos floats
+    - Atualização automática de `totalCorrect` e `totalWrong` nas métricas
 
 ### Testado
 
-- Todos os eventos disparando corretamente em sequência
-- Payloads JSON válidos para cada evento
-- Sessão encerrada corretamente ao final do fluxo completo
+- Todos os eventos disparando corretamente em sequência com payloads JSON válidos
 
 ---
 
@@ -55,37 +70,21 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 ### Adicionado
 
 - `LudusConfig.cs` — ScriptableObject de configuração do SDK
-    - Campos: `gameId`, `gameVersion`, `backendUrl`, `sendOnSessionEnd`, `enableLocalFallback`, `fallbackFolderName`, `inactivityThresholdSeconds`, `debugMode`
-    - Criação via menu `Assets → Create → LUDUS → Configuração SDK`
 - `LudusSession.cs` — modelo de dados da sessão em memória
     - Classes: `LudusSession`, `LudusMetrics`, `LudusClickEvent`, `LudusPathPoint`, `LudusGameEvent`
-    - Geração automática de UUID por sessão via `Guid.NewGuid()`
-    - Timestamps em formato ISO 8601
-    - Detecção automática de plataforma (WebGL / Android)
+    - UUID automático, timestamps ISO 8601, detecção de plataforma
 - `LudusMonitor.cs` — Singleton DontDestroyOnLoad orquestrador do SDK
-    - Carregamento automático do `LudusConfig.asset` via `Resources.Load`
-    - `StartSession(playerId)` — inicia sessão com ID do jogador
-    - `EndSession()` — encerra sessão e calcula duração
-    - `RegistrarAcao()` — registra interação e atualiza métricas
-    - `RegistrarEvento(eventType, payload)` — adiciona evento semântico à sessão
-    - `RegistrarClique(element, x, y)` — registra clique/toque com posição
-    - `RegistrarPontoPath(x, y)` — registra ponto do caminho para heatmap
-    - `VerificarInatividade()` — detecção automática por threshold configurável
-    - Gancho para `LudusExporter` comentado (a ser conectado futuramente)
-- Estrutura de pastas do SDK definida:
-    - `Assets/Scripts/LUDUS_SDK/` — scripts
-    - `Assets/Resources/LUDUS_SDK/` — assets de configuração
+    - `StartSession`, `EndSession`, `RegistrarAcao`, `RegistrarEvento`, `RegistrarClique`, `RegistrarPontoPath`, `VerificarInatividade`
+- Estrutura de pastas: `Assets/Scripts/LUDUS_SDK/` e `Assets/Resources/LUDUS_SDK/`
 
 ### Testado
 
-- Configuração carregada corretamente via `Resources.Load`
-- Sessão iniciada com UUID único gerado automaticamente
-- Logs de debug funcionando no Console do Unity
+- Configuração carregada via `Resources.Load`, sessão iniciada com UUID único
 
 ---
 
 ## Próximas versões planejadas
 
-- `[0.4.0]` — `LudusExporter.cs`: serialização JSON e envio HTTP com fallback offline
-- `[0.5.0]` — Cena de identificação do jogador integrada ao SDK
-- `[1.0.0]` — SDK completo integrado ao _Para Que Serve?_ e testado em ambiente real
+- `[0.5.0]` — Cena de identificação do jogador integrada ao Para Que Serve?
+- `[0.6.0]` — Integração real dos eventos SDK nos scripts do Para Que Serve?
+- `[1.0.0]` — SDK integrado, backend conectado e testado em ambiente real

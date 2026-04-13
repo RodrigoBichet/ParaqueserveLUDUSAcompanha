@@ -45,7 +45,7 @@ Assets/
 │       ├── LudusGameEvents.cs    ← API pública do SDK                       ✅
 │       ├── LudusInputTracker.cs  ← Captura global de mouse/touch            ✅
 │       ├── LudusClickable.cs     ← Nomeação semântica de objetos            ✅
-│       └── LudusExporter.cs      ← Serialização e envio HTTP                🔜
+│       └── LudusExporter.cs      ← Serialização e envio HTTP                ✅
 └── Resources/
     └── LUDUS_SDK/
         └── LudusConfig.asset     ← Asset de configuração (editável no Inspector)
@@ -57,8 +57,9 @@ Assets/
 
 1. Copie a pasta `Assets/Scripts/LUDUS_SDK/` para dentro do projeto Unity de destino
 2. Copie a pasta `Assets/Resources/LUDUS_SDK/` para dentro do projeto
-3. Crie um GameObject vazio na primeira cena do jogo e adicione os componentes `LudusMonitor` e `LudusInputTracker`
-4. Configure o `LudusConfig.asset` em `Resources/LUDUS_SDK/` com os dados do jogo
+3. Crie um GameObject vazio na primeira cena do jogo
+4. Adicione os componentes `LudusMonitor`, `LudusInputTracker` e `LudusExporter` nesse GameObject
+5. Configure o `LudusConfig.asset` em `Resources/LUDUS_SDK/` com os dados do jogo
 
 ---
 
@@ -73,6 +74,7 @@ Selecione o arquivo `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Unity Inspe
 | `backendUrl`                 | URL do servidor Node.js           | `http://localhost:3000` |
 | `sendOnSessionEnd`           | Envia dados ao encerrar sessão    | `true`                  |
 | `enableLocalFallback`        | Salva localmente se offline       | `true`                  |
+| `fallbackFolderName`         | Nome da pasta de fallback local   | `ludus_offline`         |
 | `inactivityThresholdSeconds` | Segundos até detectar inatividade | `10`                    |
 | `debugMode`                  | Logs no Console do Unity          | `true`                  |
 
@@ -87,6 +89,7 @@ Selecione o arquivo `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Unity Inspe
 LudusMonitor.Instance.StartSession("nome_do_jogador");
 
 // Encerrar sessão (chamar ao sair do jogo ou finalizar partida)
+// O SDK serializa, envia ao backend e gerencia o fallback automaticamente
 LudusGameEvents.SessionEnded();
 ```
 
@@ -111,9 +114,9 @@ LudusGameEvents.WrongMatch("bola", "maçã");
 LudusGameEvents.PhaseCompleted(acertos: 3, erros: 1, timeSeconds: 45.2f, stars: 2);
 ```
 
-### 3. Nomear objetos interativos (LudusClickable)
+### 3. Nomear objetos interativos
 
-Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo do jogo e defina o `elementName`:
+Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo e defina o `elementName`. O `LudusInputTracker` detecta o clique automaticamente — sem nenhuma linha de código extra.
 
 | Objeto no jogo               | elementName sugerido      |
 | ---------------------------- | ------------------------- |
@@ -122,7 +125,29 @@ Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo d
 | Botão jogar do menu          | `btn_menu_jogar`          |
 | Imagem alvo do pareamento    | `img_alvo`                |
 
-O `LudusInputTracker` detecta automaticamente o clique e registra o nome sem nenhuma linha de código extra.
+---
+
+## Fluxo completo de uma sessão
+
+```
+Jogo abre
+    ↓
+LudusExporter verifica sessões pendentes e reenvia se houver
+    ↓
+Jogador se identifica (cena de identificação)
+    ↓
+LudusMonitor.Instance.StartSession("nome")
+    ↓
+Criança joga — LudusGameEvents registra cada ação
+    ↓
+LudusInputTracker registra cliques e caminho do dedo automaticamente
+    ↓
+LudusGameEvents.SessionEnded()
+    ↓
+LudusExporter envia JSON ao backend
+    ↓ (se falhar)
+Salva localmente em persistentDataPath/ludus_offline/
+```
 
 ---
 
@@ -151,7 +176,17 @@ O `LudusInputTracker` detecta automaticamente o clique e registra o nome sem nen
 | LudusGameEvents.cs   | ✅ Concluído |
 | LudusInputTracker.cs | ✅ Concluído |
 | LudusClickable.cs    | ✅ Concluído |
-| LudusExporter.cs     | 🔜 Pendente  |
+| LudusExporter.cs     | ✅ Concluído |
+| **SDK completo**     | ✅           |
+
+### Próximas etapas do projeto
+
+| Etapa     | Descrição                                           | Status |
+| --------- | --------------------------------------------------- | ------ |
+| Etapa 1.5 | Cena de identificação do jogador no Para Que Serve? | 🔜     |
+| Etapa 2   | Backend Node.js + Express + MongoDB                 | 🔜     |
+| Etapa 3   | Dashboard React                                     | 🔜     |
+| Etapa 4   | Análise ML com Python + scikit-learn                | 🔜     |
 
 ---
 
