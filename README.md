@@ -41,7 +41,7 @@ Assets/
 │       ├── LudusConfig.cs        ← Configuração (ScriptableObject)
 │       ├── LudusSession.cs       ← Modelo de dados da sessão
 │       ├── LudusMonitor.cs       ← Singleton orquestrador
-│       ├── LudusGameEvents.cs    ← API pública do SDK (em desenvolvimento)
+│       ├── LudusGameEvents.cs    ← API pública do SDK ✅
 │       ├── LudusInputTracker.cs  ← Captura de mouse/touch (em desenvolvimento)
 │       ├── LudusClickable.cs     ← Nomeação semântica de objetos (em desenvolvimento)
 │       └── LudusExporter.cs      ← Serialização e envio HTTP (em desenvolvimento)
@@ -77,32 +77,53 @@ Selecione o arquivo `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Unity Inspe
 
 ---
 
-## Como usar (uso básico)
+## Como usar
+
+### 1. Iniciar e encerrar sessão
 
 ```csharp
 // Iniciar sessão (chamar na cena de identificação do jogador)
 LudusMonitor.Instance.StartSession("nome_do_jogador");
 
 // Encerrar sessão (chamar ao sair do jogo ou finalizar partida)
-LudusMonitor.Instance.EndSession();
+LudusGameEvents.SessionEnded();
 ```
 
-> A API pública completa estará disponível no `LudusGameEvents.cs` (em desenvolvimento).
+### 2. Disparar eventos semânticos
+
+```csharp
+// Criança escolheu uma categoria
+LudusGameEvents.CategorySelected("Alimentos");
+
+// Nova fase iniciada
+LudusGameEvents.PhaseStarted("maçã", new string[] { "maçã", "bola", "carro", "peixe" });
+
+// Criança arrastou um item (correto ou errado)
+LudusGameEvents.DragAttempt("bola", "maçã", false);  // errou
+LudusGameEvents.DragAttempt("maçã", "maçã", true);   // acertou
+
+// Registrar acerto ou erro separadamente
+LudusGameEvents.CorrectMatch("maçã", 3.5f);
+LudusGameEvents.WrongMatch("bola", "maçã");
+
+// Fase concluída com resumo de desempenho
+LudusGameEvents.PhaseCompleted(acertos: 3, erros: 1, timeSeconds: 45.2f, stars: 2);
+```
 
 ---
 
-## Eventos semânticos planejados (Para Que Serve?)
+## Eventos semânticos (Para Que Serve?)
 
-| Evento               | Quando dispara                                             |
-| -------------------- | ---------------------------------------------------------- |
-| `CategorySelected`   | Criança escolhe uma categoria                              |
-| `PhaseStarted`       | Nova fase iniciada (item-alvo + 4 opções geradas)          |
-| `DragAttempt`        | Criança arrasta um item                                    |
-| `CorrectMatch`       | Pareamento correto                                         |
-| `WrongMatch`         | Pareamento incorreto                                       |
-| `PhaseCompleted`     | Fase concluída (resumo de acertos, erros, tempo, estrelas) |
-| `InactivityDetected` | Automático — threshold configurável                        |
-| `SessionEnded`       | Sessão encerrada, dados prontos para envio                 |
+| Evento                                        | Quando disparar                 |
+| --------------------------------------------- | ------------------------------- |
+| `CategorySelected(category)`                  | Criança escolhe uma categoria   |
+| `PhaseStarted(target, options[])`             | Nova fase iniciada              |
+| `DragAttempt(item, target, correct)`          | Criança arrasta qualquer item   |
+| `CorrectMatch(item, timeSeconds)`             | Pareamento correto              |
+| `WrongMatch(item, expected)`                  | Pareamento incorreto            |
+| `PhaseCompleted(acertos, erros, time, stars)` | Fase concluída                  |
+| `InactivityDetected`                          | Automático — disparado pelo SDK |
+| `SessionEnded()`                              | Encerra sessão e envia dados    |
 
 ---
 
@@ -113,9 +134,9 @@ LudusMonitor.Instance.EndSession();
 | LudusConfig.cs       | ✅ Concluído          |
 | LudusSession.cs      | ✅ Concluído          |
 | LudusMonitor.cs      | ✅ Concluído          |
-| LudusGameEvents.cs   | 🔧 Em desenvolvimento |
-| LudusInputTracker.cs | 🔜 Pendente           |
-| LudusClickable.cs    | 🔜 Pendente           |
+| LudusGameEvents.cs   | ✅ Concluído          |
+| LudusInputTracker.cs | 🔧 Em desenvolvimento |
+| LudusClickable.cs    | 🔧 Em desenvolvimento |
 | LudusExporter.cs     | 🔜 Pendente           |
 
 ---

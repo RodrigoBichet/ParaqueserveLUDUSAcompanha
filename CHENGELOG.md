@@ -5,6 +5,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.2.0] — 2026-04-13
+
+### Adicionado
+
+- `LudusGameEvents.cs` — API pública estática do SDK
+    - `CategorySelected(category)` — criança escolhe uma categoria
+    - `PhaseStarted(targetItem, options[])` — nova fase iniciada com item-alvo e opções
+    - `DragAttempt(draggedItem, targetItem, correct)` — criança arrasta qualquer item
+    - `CorrectMatch(item, timeSeconds)` — pareamento correto com tempo da fase
+    - `WrongMatch(draggedItem, expectedItem)` — pareamento incorreto
+    - `PhaseCompleted(acertos, erros, timeSeconds, stars)` — resumo de desempenho da fase
+    - `SessionEnded()` — encerra sessão e aciona o Monitor
+    - `ValidarMonitor()` — verificação interna antes de cada chamada com mensagens de erro claras
+    - Payloads em JSON com `InvariantCulture` nos floats (ponto decimal garantido)
+    - Atualização automática de `totalCorrect` e `totalWrong` nas métricas da sessão
+
+### Testado
+
+- Todos os eventos disparando corretamente em sequência
+- Payloads JSON válidos para cada evento
+- Sessão encerrada corretamente ao final do fluxo completo
+
+---
+
 ## [0.1.0] — 2026-04-12
 
 ### Adicionado
@@ -41,7 +65,6 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[0.2.0]` — `LudusGameEvents.cs`: API pública estática com eventos semânticos do _Para Que Serve?_
 - `[0.3.0]` — `LudusInputTracker.cs` + `LudusClickable.cs`: captura global de input e nomeação semântica
 - `[0.4.0]` — `LudusExporter.cs`: serialização JSON e envio HTTP com fallback offline
 - `[0.5.0]` — Cena de identificação do jogador integrada ao SDK
