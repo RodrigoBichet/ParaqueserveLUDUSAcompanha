@@ -132,7 +132,7 @@ namespace LudusSDK
 
             if (_config.debugMode)
                 Debug.Log("[LUDUS] Sessão iniciada. Player: " + playerId +
-                          " | ID: " + _currentSession.sessionId);
+                        " | ID: " + _currentSession.sessionId);
         }
 
         // =========================================================================
@@ -155,14 +155,16 @@ namespace LudusSDK
 
             if (_config.debugMode)
                 Debug.Log("[LUDUS] Sessão encerrada. Duração: " +
-                          _currentSession.durationMs + "ms");
+                        _currentSession.durationMs + "ms");
 
             // Envia os dados se configurado para isso
             if (_config.sendOnSessionEnd)
             {
-                // LudusExporter.Instance.Exportar(_currentSession);
-                // (descomentar quando o LudusExporter estiver pronto)
-                Debug.Log("[LUDUS] Exportação pendente — LudusExporter ainda não implementado.");
+                if (LudusExporter.Instance != null)
+                    LudusExporter.Instance.Exportar(_currentSession);
+                else
+                    Debug.LogWarning("[LUDUS] LudusExporter não encontrado. " +
+                                "Adicione o componente no mesmo GameObject do LudusMonitor.");
             }
         }
 
