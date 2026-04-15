@@ -1,3 +1,22 @@
+// using System.Collections;
+// using System.Collections.Generic;
+// using UnityEngine;
+// using UnityEngine.SceneManagement;
+
+// public class Menu : MonoBehaviour
+// {
+
+//     public void LoadScenes(string cena)
+//     {
+//         SceneManager.LoadScene(cena);
+//     }
+
+//     public void Quit()
+//     {
+//         Application.Quit();
+//     }
+// }
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +24,13 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-
     public void LoadScenes(string cena)
     {
+        // Só registra CategorySelected para cenas de categoria real
+        string[] categorias = { "Fase01", "Fase02", "Fase03", "Fase04", "Fase05" };
+        if (System.Array.Exists(categorias, c => c == cena))
+            LudusSDK.LudusGameEvents.CategorySelected(cena);
+
         SceneManager.LoadScene(cena);
     }
 
