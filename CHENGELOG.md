@@ -5,27 +5,57 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.5.0] — 2026-04-15 — Etapa 1.5 completa 🎉
+
+### Adicionado
+
+- `IdentificacaoController.cs` — controle da cena de identificação do jogador
+    - Lê o nome digitado no `TMP_InputField` e chama `LudusMonitor.StartSession()`
+    - Nome padrão `"Jogador"` quando campo vazio
+    - Cena `Inicial` criada e adicionada como índice 0 no Build Settings
+- `Menu.cs` atualizado — `CategorySelected` filtrado
+    - Evento disparado apenas para cenas de categoria real (`Fase01` a `Fase05`)
+    - Navegação entre menus não gera eventos desnecessários
+- `SceneControl.cs` atualizado — controle de fases integrado ao SDK
+    - `PhaseStarted` ao ativar cada Canvas aleatório com nome do Canvas como identificador
+    - `PhaseCompleted` com tempo real da rodada, acertos, erros e estrelas calculados automaticamente
+    - Helpers `ObterErrosDaCategoria()`, `ObterAcertosDaCategoria()` e `CalcularEstrelas()` reutilizando os GameManagers existentes
+    - Cronômetro `_tempoInicioFase` reiniciado a cada nova fase
+- `ItemColado.cs` atualizado — detecção de acerto/erro integrada ao SDK
+    - `DragAttempt` registrado em toda tentativa de arraste
+    - `CorrectMatch` com tempo real da fase via `_tempoInicioFase` no `OnEnable()`
+    - `WrongMatch` com nome do item arrastado e item esperado
+
+### Testado
+
+- Fluxo completo em jogo real: identificação → menu → categoria → fases → acertos/erros
+- `CategorySelected` disparando apenas para categorias reais
+- `PhaseStarted` identificando Canvas aleatório corretamente
+- `DragAttempt` + `CorrectMatch` com tempo real registrado
+- `PhaseCompleted` com estrelas calculadas automaticamente
+
+### Marco
+
+- **Etapas 1 e 1.5 concluídas** — SDK completo e integrado ao Para Que Serve?
+
+---
+
 ## [0.4.0] — 2026-04-14 — SDK Completo 🎉
 
 ### Adicionado
 
 - `LudusExporter.cs` — serialização e envio de sessões ao backend
-    - `Exportar(session)` — serializa a sessão em JSON via `JsonUtility.ToJson()` e envia via HTTP POST
-    - `EnviarParaBackend()` — Coroutine com `UnityWebRequest` para envio assíncrono sem travar o jogo
-    - `SalvarLocalmente()` — fallback offline: salva JSON em `persistentDataPath/ludus_offline/` com UUID como nome do arquivo
-    - `TentarReenviarPendentes()` — roda ao iniciar o jogo, reenvia arquivos pendentes com pausa de 0.5s entre cada um
-    - `RemoverArquivoFallback()` — limpa o arquivo local após reenvio bem-sucedido
-- `LudusMonitor.cs` atualizado — `EndSession()` agora aciona `LudusExporter.Instance.Exportar()` diretamente
+    - `Exportar(session)` — serializa em JSON via `JsonUtility.ToJson()` e envia via HTTP POST
+    - `EnviarParaBackend()` — Coroutine com `UnityWebRequest` para envio assíncrono
+    - `SalvarLocalmente()` — fallback offline em `persistentDataPath/ludus_offline/`
+    - `TentarReenviarPendentes()` — reenvio automático ao iniciar o jogo
+    - `RemoverArquivoFallback()` — limpeza após reenvio bem-sucedido
+- `LudusMonitor.cs` atualizado — `EndSession()` conectado ao `LudusExporter`
 
 ### Testado
 
-- Fallback funcionando: sessão salva localmente em `persistentDataPath/ludus_offline/` quando backend está offline
-- Arquivo nomeado corretamente com UUID da sessão
+- Fallback funcionando: sessão salva localmente quando backend offline
 - Reenvio automático de pendentes ao iniciar o jogo
-
-### Marco
-
-- **SDK completo** — todos os 7 componentes implementados e testados
 
 ---
 
@@ -33,19 +63,15 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado
 
-- `LudusClickable.cs` — componente de nomeação semântica de objetos
-    - Campo `elementName` para identificar botões e objetos interativos nos dados coletados
-    - Compatível com qualquer GameObject (UI ou mundo 2D)
+- `LudusClickable.cs` — nomeação semântica de objetos interativos
 - `LudusInputTracker.cs` — captura global de input
-    - Detecção de cliques via mouse (WebGL/Editor) e toque via touch (Android)
-    - Tratamento separado para cliques em UI (`EventSystem`) e objetos 2D do mundo (`Physics2D.Raycast`)
-    - Busca `LudusClickable` no objeto clicado e em seus pais na hierarquia (`GetComponentInParent`)
-    - Registro do caminho do mouse/dedo a cada `0.1s` para geração de heatmap
-    - Só processa input quando há sessão ativa
+    - Mouse (WebGL/Editor) e touch (Android)
+    - Raycast em UI e mundo 2D
+    - Registro de caminho a cada `0.1s` para heatmap
 
 ### Testado
 
-- Clique em botão UI identificado corretamente com nome semântico e posição
+- Clique em botão UI identificado com nome semântico e posição
 
 ---
 
@@ -53,15 +79,13 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado
 
-- `LudusGameEvents.cs` — API pública estática do SDK
+- `LudusGameEvents.cs` — API pública estática
     - `CategorySelected`, `PhaseStarted`, `DragAttempt`, `CorrectMatch`, `WrongMatch`, `PhaseCompleted`, `SessionEnded`
-    - `ValidarMonitor()` — verificação interna antes de cada chamada
-    - Payloads em JSON com `InvariantCulture` nos floats
-    - Atualização automática de `totalCorrect` e `totalWrong` nas métricas
+    - Validação automática do Monitor antes de cada chamada
 
 ### Testado
 
-- Todos os eventos disparando corretamente em sequência com payloads JSON válidos
+- Todos os eventos disparando com payloads JSON válidos
 
 ---
 
@@ -69,13 +93,9 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado
 
-- `LudusConfig.cs` — ScriptableObject de configuração do SDK
-- `LudusSession.cs` — modelo de dados da sessão em memória
-    - Classes: `LudusSession`, `LudusMetrics`, `LudusClickEvent`, `LudusPathPoint`, `LudusGameEvent`
-    - UUID automático, timestamps ISO 8601, detecção de plataforma
-- `LudusMonitor.cs` — Singleton DontDestroyOnLoad orquestrador do SDK
-    - `StartSession`, `EndSession`, `RegistrarAcao`, `RegistrarEvento`, `RegistrarClique`, `RegistrarPontoPath`, `VerificarInatividade`
-- Estrutura de pastas: `Assets/Scripts/LUDUS_SDK/` e `Assets/Resources/LUDUS_SDK/`
+- `LudusConfig.cs` — ScriptableObject de configuração
+- `LudusSession.cs` — modelo de dados com UUID, timestamps ISO 8601 e detecção de plataforma
+- `LudusMonitor.cs` — Singleton DontDestroyOnLoad com detecção de inatividade
 
 ### Testado
 
@@ -85,6 +105,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[0.5.0]` — Cena de identificação do jogador integrada ao Para Que Serve?
-- `[0.6.0]` — Integração real dos eventos SDK nos scripts do Para Que Serve?
-- `[1.0.0]` — SDK integrado, backend conectado e testado em ambiente real
+- `[1.0.0]` — Backend Node.js + Express + MongoDB conectado ao SDK
+- `[1.1.0]` — Dashboard React com visualização dos dados coletados
+- `[1.2.0]` — Análise ML com Python + scikit-learn
+- `[2.0.0]` — Sistema completo testado nas escolas parceiras

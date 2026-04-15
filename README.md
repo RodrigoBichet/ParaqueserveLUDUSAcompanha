@@ -18,10 +18,10 @@ O SDK funciona como uma "máscara" plugável — o jogo não precisa ter sua ló
 
 ## Jogos monitorados
 
-| Jogo                   | Plataforma      | Status           |
-| ---------------------- | --------------- | ---------------- |
-| Para Que Serve?        | WebGL + Android | ✅ Em integração |
-| Historietas Divertidas | WebGL + Android | 🔜 Futuro        |
+| Jogo                   | Plataforma      | Status       |
+| ---------------------- | --------------- | ------------ |
+| Para Que Serve?        | WebGL + Android | ✅ Integrado |
+| Historietas Divertidas | WebGL + Android | 🔜 Futuro    |
 
 ---
 
@@ -38,18 +38,39 @@ Unity (C# SDK) → JSON → Node.js + Express → MongoDB → API REST → Pytho
 ```
 Assets/
 ├── Scripts/
-│   └── LUDUS_SDK/
-│       ├── LudusConfig.cs        ← Configuração (ScriptableObject)          ✅
-│       ├── LudusSession.cs       ← Modelo de dados da sessão                ✅
-│       ├── LudusMonitor.cs       ← Singleton orquestrador                   ✅
-│       ├── LudusGameEvents.cs    ← API pública do SDK                       ✅
-│       ├── LudusInputTracker.cs  ← Captura global de mouse/touch            ✅
-│       ├── LudusClickable.cs     ← Nomeação semântica de objetos            ✅
-│       └── LudusExporter.cs      ← Serialização e envio HTTP                ✅
+│   ├── LUDUS_SDK/
+│   │   ├── LudusConfig.cs        ← Configuração (ScriptableObject)          ✅
+│   │   ├── LudusSession.cs       ← Modelo de dados da sessão                ✅
+│   │   ├── LudusMonitor.cs       ← Singleton orquestrador                   ✅
+│   │   ├── LudusGameEvents.cs    ← API pública do SDK                       ✅
+│   │   ├── LudusInputTracker.cs  ← Captura global de mouse/touch            ✅
+│   │   ├── LudusClickable.cs     ← Nomeação semântica de objetos            ✅
+│   │   └── LudusExporter.cs      ← Serialização e envio HTTP                ✅
+│   └── ParaQueServe/
+│       ├── IdentificacaoController.cs  ← Identificação do jogador           ✅
+│       ├── Menu.cs                     ← Seleção de categoria               ✅
+│       ├── SceneControl.cs             ← Controle de fases                  ✅
+│       └── ItemColado.cs               ← Detecção de acerto/erro            ✅
 └── Resources/
     └── LUDUS_SDK/
         └── LudusConfig.asset     ← Asset de configuração (editável no Inspector)
 ```
+
+---
+
+## Cenas do jogo
+
+| Índice | Cena          | Descrição                        |
+| ------ | ------------- | -------------------------------- |
+| 0      | Identificacao | Tela de identificação do jogador |
+| 1      | Menu          | Menu principal                   |
+| 2      | SelectLevel   | Seleção de categoria             |
+| 3      | Tutorial      | Tutorial do jogo                 |
+| 4      | Fase01        | Categoria: Ações                 |
+| 5      | Fase02        | Categoria: Alimentos             |
+| 6      | Fase03        | Categoria: Cotidiano             |
+| 7      | Fase04        | Categoria: Diversão              |
+| 8      | Fase05        | Categoria: Higiene               |
 
 ---
 
@@ -60,6 +81,7 @@ Assets/
 3. Crie um GameObject vazio na primeira cena do jogo
 4. Adicione os componentes `LudusMonitor`, `LudusInputTracker` e `LudusExporter` nesse GameObject
 5. Configure o `LudusConfig.asset` em `Resources/LUDUS_SDK/` com os dados do jogo
+6. Nos scripts do jogo, adicione as chamadas de `LudusGameEvents` nos pontos relevantes
 
 ---
 
@@ -89,7 +111,6 @@ Selecione o arquivo `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Unity Inspe
 LudusMonitor.Instance.StartSession("nome_do_jogador");
 
 // Encerrar sessão (chamar ao sair do jogo ou finalizar partida)
-// O SDK serializa, envia ao backend e gerencia o fallback automaticamente
 LudusGameEvents.SessionEnded();
 ```
 
@@ -97,54 +118,52 @@ LudusGameEvents.SessionEnded();
 
 ```csharp
 // Criança escolheu uma categoria
-LudusGameEvents.CategorySelected("Alimentos");
+LudusGameEvents.CategorySelected("Fase01");
 
 // Nova fase iniciada
-LudusGameEvents.PhaseStarted("maçã", new string[] { "maçã", "bola", "carro", "peixe" });
+LudusGameEvents.PhaseStarted("Canvas02", new string[] { });
 
-// Criança arrastou um item (correto ou errado)
-LudusGameEvents.DragAttempt("bola", "maçã", false);  // errou
-LudusGameEvents.DragAttempt("maçã", "maçã", true);   // acertou
+// Criança arrastou um item
+LudusGameEvents.DragAttempt("cadeira", "praqueserve", true);
 
-// Registrar acerto ou erro separadamente
-LudusGameEvents.CorrectMatch("maçã", 3.5f);
-LudusGameEvents.WrongMatch("bola", "maçã");
+// Registrar acerto ou erro
+LudusGameEvents.CorrectMatch("cadeira", 27.41f);
+LudusGameEvents.WrongMatch("bola", "praqueserve");
 
-// Fase concluída com resumo de desempenho
-LudusGameEvents.PhaseCompleted(acertos: 3, erros: 1, timeSeconds: 45.2f, stars: 2);
+// Fase concluída
+LudusGameEvents.PhaseCompleted(acertos: 4, erros: 0, timeSeconds: 45.2f, stars: 3);
 ```
 
 ### 3. Nomear objetos interativos
 
-Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo e defina o `elementName`. O `LudusInputTracker` detecta o clique automaticamente — sem nenhuma linha de código extra.
-
-| Objeto no jogo               | elementName sugerido      |
-| ---------------------------- | ------------------------- |
-| Botão da categoria Alimentos | `btn_categoria_alimentos` |
-| Imagem da opção maçã         | `img_opcao_maca`          |
-| Botão jogar do menu          | `btn_menu_jogar`          |
-| Imagem alvo do pareamento    | `img_alvo`                |
+Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo e defina o `elementName`. O `LudusInputTracker` detecta o clique automaticamente.
 
 ---
 
 ## Fluxo completo de uma sessão
 
 ```
-Jogo abre
+Jogo abre (cena Identificacao)
     ↓
-LudusExporter verifica sessões pendentes e reenvia se houver
+LudusExporter verifica e reenvia sessões pendentes
     ↓
-Jogador se identifica (cena de identificação)
+Professor digita nome da criança → BotaoJogar()
     ↓
-LudusMonitor.Instance.StartSession("nome")
+LudusMonitor.StartSession("nome")
     ↓
-Criança joga — LudusGameEvents registra cada ação
+Criança navega pelo Menu → SelectLevel
     ↓
-LudusInputTracker registra cliques e caminho do dedo automaticamente
+Criança escolhe categoria → CategorySelected("Fase01")
     ↓
-LudusGameEvents.SessionEnded()
+Canvas aleatório ativado → PhaseStarted("Canvas02")
     ↓
-LudusExporter envia JSON ao backend
+Criança arrasta item → DragAttempt + CorrectMatch ou WrongMatch
+    ↓
+4 acertos → PhaseCompleted(acertos, erros, tempo, estrelas)
+    ↓
+Criança retorna ao SelectLevel ou encerra
+    ↓
+SessionEnded() → LudusExporter envia JSON ao backend
     ↓ (se falhar)
 Salva localmente em persistentDataPath/ludus_offline/
 ```
@@ -153,40 +172,49 @@ Salva localmente em persistentDataPath/ludus_offline/
 
 ## Eventos semânticos (Para Que Serve?)
 
-| Evento                                        | Quando disparar                 |
-| --------------------------------------------- | ------------------------------- |
-| `CategorySelected(category)`                  | Criança escolhe uma categoria   |
-| `PhaseStarted(target, options[])`             | Nova fase iniciada              |
-| `DragAttempt(item, target, correct)`          | Criança arrasta qualquer item   |
-| `CorrectMatch(item, timeSeconds)`             | Pareamento correto              |
-| `WrongMatch(item, expected)`                  | Pareamento incorreto            |
-| `PhaseCompleted(acertos, erros, time, stars)` | Fase concluída                  |
-| `InactivityDetected`                          | Automático — disparado pelo SDK |
-| `SessionEnded()`                              | Encerra sessão e envia dados    |
+| Evento                                        | Quando dispara                      |
+| --------------------------------------------- | ----------------------------------- |
+| `CategorySelected(category)`                  | Criança escolhe uma categoria       |
+| `PhaseStarted(target, options[])`             | Novo Canvas de fase ativado         |
+| `DragAttempt(item, target, correct)`          | Criança arrasta qualquer item       |
+| `CorrectMatch(item, timeSeconds)`             | Pareamento correto                  |
+| `WrongMatch(item, expected)`                  | Pareamento incorreto                |
+| `PhaseCompleted(acertos, erros, time, stars)` | 4 Canvas completados                |
+| `InactivityDetected`                          | Automático — threshold configurável |
+| `SessionEnded()`                              | Encerra sessão e envia dados        |
 
 ---
 
 ## Status do desenvolvimento
 
-| Componente           | Status       |
-| -------------------- | ------------ |
-| LudusConfig.cs       | ✅ Concluído |
-| LudusSession.cs      | ✅ Concluído |
-| LudusMonitor.cs      | ✅ Concluído |
-| LudusGameEvents.cs   | ✅ Concluído |
-| LudusInputTracker.cs | ✅ Concluído |
-| LudusClickable.cs    | ✅ Concluído |
-| LudusExporter.cs     | ✅ Concluído |
-| **SDK completo**     | ✅           |
+### Etapa 1 — SDK Unity ✅
 
-### Próximas etapas do projeto
+| Componente           | Status |
+| -------------------- | ------ |
+| LudusConfig.cs       | ✅     |
+| LudusSession.cs      | ✅     |
+| LudusMonitor.cs      | ✅     |
+| LudusGameEvents.cs   | ✅     |
+| LudusInputTracker.cs | ✅     |
+| LudusClickable.cs    | ✅     |
+| LudusExporter.cs     | ✅     |
 
-| Etapa     | Descrição                                           | Status |
-| --------- | --------------------------------------------------- | ------ |
-| Etapa 1.5 | Cena de identificação do jogador no Para Que Serve? | 🔜     |
-| Etapa 2   | Backend Node.js + Express + MongoDB                 | 🔜     |
-| Etapa 3   | Dashboard React                                     | 🔜     |
-| Etapa 4   | Análise ML com Python + scikit-learn                | 🔜     |
+### Etapa 1.5 — Integração no Para Que Serve? ✅
+
+| Componente                                            | Status |
+| ----------------------------------------------------- | ------ |
+| Cena de identificação do jogador                      | ✅     |
+| CategorySelected nos botões de categoria              | ✅     |
+| PhaseStarted / PhaseCompleted no SceneControl         | ✅     |
+| DragAttempt / CorrectMatch / WrongMatch no ItemColado | ✅     |
+
+### Próximas etapas
+
+| Etapa   | Descrição                            | Status |
+| ------- | ------------------------------------ | ------ |
+| Etapa 2 | Backend Node.js + Express + MongoDB  | 🔜     |
+| Etapa 3 | Dashboard React                      | 🔜     |
+| Etapa 4 | Análise ML com Python + scikit-learn | 🔜     |
 
 ---
 
