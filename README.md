@@ -1,6 +1,4 @@
-# ParaqueserveLUDUSAcompanha
-
-# LUDUS Monitor SDK
+# Para Que Serve? — LUDUS Monitor SDK
 
 > Parte do projeto **LUDUS Acompanha** — Mestrado em Ciência da Computação, UFPel (2026)  
 > Autor: Rodrigo Leitzke Bichet  
@@ -10,25 +8,16 @@
 
 ## O que é
 
-O **LUDUS Monitor SDK** é um conjunto de scripts Unity (C#) que adiciona monitoramento automático de gameplay a qualquer jogo da plataforma **Mais LUDUS**. Ele coleta dados de interação das crianças (cliques, acertos, erros, inatividade, trajetória do mouse) e os envia para um backend Node.js, onde ficam disponíveis para análise em um dashboard para professores e tutores.
+O **Para Que Serve?** é um jogo educacional desenvolvido em Unity para a plataforma **Mais LUDUS**, voltado para crianças com necessidades educacionais específicas (TEA). Este repositório contém o jogo integrado ao **LUDUS Monitor SDK** — um sistema de monitoramento de gameplay que coleta dados de interação e os envia para análise em um dashboard para professores e tutores.
 
-O SDK funciona como uma "máscara" plugável — o jogo não precisa ter sua lógica alterada, apenas chama os métodos públicos do SDK nos pontos relevantes.
-
----
-
-## Jogos monitorados
-
-| Jogo                   | Plataforma      | Status       |
-| ---------------------- | --------------- | ------------ |
-| Para Que Serve?        | WebGL + Android | ✅ Integrado |
-| Historietas Divertidas | WebGL + Android | 🔜 Futuro    |
+> ⚠️ **Princípio fundamental:** O LUDUS Acompanha é uma ferramenta de apoio pedagógico. Fornece dados e indicadores para auxiliar professores e tutores nas suas observações. **Nunca substitui avaliação profissional e nunca emite diagnósticos.**
 
 ---
 
 ## Arquitetura geral do projeto
 
 ```
-Unity (C# SDK) → JSON → Node.js + Express → MongoDB → API REST → Python ML → Dashboard React
+Unity (C# SDK) → JSON → Node.js + Express → MongoDB → API REST → Dashboard React
 ```
 
 ---
@@ -39,21 +28,21 @@ Unity (C# SDK) → JSON → Node.js + Express → MongoDB → API REST → Pytho
 Assets/
 ├── Scripts/
 │   ├── LUDUS_SDK/
-│   │   ├── LudusConfig.cs        ← Configuração (ScriptableObject)          ✅
-│   │   ├── LudusSession.cs       ← Modelo de dados da sessão                ✅
-│   │   ├── LudusMonitor.cs       ← Singleton orquestrador                   ✅
-│   │   ├── LudusGameEvents.cs    ← API pública do SDK                       ✅
-│   │   ├── LudusInputTracker.cs  ← Captura global de mouse/touch            ✅
-│   │   ├── LudusClickable.cs     ← Nomeação semântica de objetos            ✅
-│   │   └── LudusExporter.cs      ← Serialização e envio HTTP                ✅
-│   └── ParaQueServe/
-│       ├── IdentificacaoController.cs  ← Identificação do jogador           ✅
-│       ├── Menu.cs                     ← Seleção de categoria               ✅
-│       ├── SceneControl.cs             ← Controle de fases                  ✅
-│       └── ItemColado.cs               ← Detecção de acerto/erro            ✅
+│   │   ├── LudusConfig.cs        ← Configuração (ScriptableObject)
+│   │   ├── LudusSession.cs       ← Modelo de dados da sessão
+│   │   ├── LudusMonitor.cs       ← Singleton orquestrador
+│   │   ├── LudusGameEvents.cs    ← API pública do SDK
+│   │   ├── LudusInputTracker.cs  ← Captura global de mouse/touch
+│   │   ├── LudusClickable.cs     ← Nomeação semântica de objetos
+│   │   └── LudusExporter.cs      ← Serialização e envio HTTP
+│   └── (scripts do jogo)
+│       ├── IdentificacaoController.cs  ← Seleção de aluno em cascata
+│       ├── Menu.cs                     ← Navegação + CategorySelected
+│       ├── SceneControl.cs             ← PhaseStarted + PhaseCompleted
+│       └── ItemColado.cs               ← CorrectMatch + WrongMatch
 └── Resources/
     └── LUDUS_SDK/
-        └── LudusConfig.asset     ← Asset de configuração (editável no Inspector)
+        └── LudusConfig.asset     ← Asset de configuração
 ```
 
 ---
@@ -62,7 +51,7 @@ Assets/
 
 | Índice | Cena          | Descrição                        |
 | ------ | ------------- | -------------------------------- |
-| 0      | Identificacao | Tela de identificação do jogador |
+| 0      | Identificacao | Seleção de escola, turma e aluno |
 | 1      | Menu          | Menu principal                   |
 | 2      | SelectLevel   | Seleção de categoria             |
 | 3      | Tutorial      | Tutorial do jogo                 |
@@ -74,69 +63,21 @@ Assets/
 
 ---
 
-## Como instalar em um novo jogo
+## Como configurar o SDK
 
-1. Copie a pasta `Assets/Scripts/LUDUS_SDK/` para dentro do projeto Unity de destino
-2. Copie a pasta `Assets/Resources/LUDUS_SDK/` para dentro do projeto
-3. Crie um GameObject vazio na primeira cena do jogo
-4. Adicione os componentes `LudusMonitor`, `LudusInputTracker` e `LudusExporter` nesse GameObject
-5. Configure o `LudusConfig.asset` em `Resources/LUDUS_SDK/` com os dados do jogo
-6. Nos scripts do jogo, adicione as chamadas de `LudusGameEvents` nos pontos relevantes
+1. Seleciona o `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Inspector
+2. Configura o `backendUrl` com a URL do servidor Node.js
+3. O GameObject do SDK (`LudusMonitor` + `LudusInputTracker` + `LudusExporter`) deve estar na cena `Identificacao`
 
----
-
-## Como configurar
-
-Selecione o arquivo `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Unity Inspector:
-
-| Campo                        | Descrição                         | Padrão                  |
-| ---------------------------- | --------------------------------- | ----------------------- |
-| `gameId`                     | Identificador único do jogo       | `para-que-serve`        |
-| `gameVersion`                | Versão atual do jogo              | `1.0.0`                 |
-| `backendUrl`                 | URL do servidor Node.js           | `http://localhost:3000` |
-| `sendOnSessionEnd`           | Envia dados ao encerrar sessão    | `true`                  |
-| `enableLocalFallback`        | Salva localmente se offline       | `true`                  |
-| `fallbackFolderName`         | Nome da pasta de fallback local   | `ludus_offline`         |
-| `inactivityThresholdSeconds` | Segundos até detectar inatividade | `10`                    |
-| `debugMode`                  | Logs no Console do Unity          | `true`                  |
-
----
-
-## Como usar
-
-### 1. Iniciar e encerrar sessão
-
-```csharp
-// Iniciar sessão (chamar na cena de identificação do jogador)
-LudusMonitor.Instance.StartSession("nome_do_jogador");
-
-// Encerrar sessão (chamar ao sair do jogo ou finalizar partida)
-LudusGameEvents.SessionEnded();
-```
-
-### 2. Disparar eventos semânticos
-
-```csharp
-// Criança escolheu uma categoria
-LudusGameEvents.CategorySelected("Fase01");
-
-// Nova fase iniciada
-LudusGameEvents.PhaseStarted("Canvas02", new string[] { });
-
-// Criança arrastou um item
-LudusGameEvents.DragAttempt("cadeira", "praqueserve", true);
-
-// Registrar acerto ou erro
-LudusGameEvents.CorrectMatch("cadeira", 27.41f);
-LudusGameEvents.WrongMatch("bola", "praqueserve");
-
-// Fase concluída
-LudusGameEvents.PhaseCompleted(acertos: 4, erros: 0, timeSeconds: 45.2f, stars: 3);
-```
-
-### 3. Nomear objetos interativos
-
-Adicione o componente `LudusClickable` em qualquer botão ou objeto interativo e defina o `elementName`. O `LudusInputTracker` detecta o clique automaticamente.
+| Campo                        | Descrição             | Padrão                  |
+| ---------------------------- | --------------------- | ----------------------- |
+| `gameId`                     | Identificador do jogo | `para-que-serve`        |
+| `gameVersion`                | Versão do jogo        | `1.0.0`                 |
+| `backendUrl`                 | URL do servidor       | `http://localhost:3000` |
+| `sendOnSessionEnd`           | Envia ao encerrar     | `true`                  |
+| `enableLocalFallback`        | Salva offline         | `true`                  |
+| `inactivityThresholdSeconds` | Threshold inatividade | `10`                    |
+| `debugMode`                  | Logs no Console       | `true`                  |
 
 ---
 
@@ -147,36 +88,32 @@ Jogo abre (cena Identificacao)
     ↓
 LudusExporter verifica e reenvia sessões pendentes
     ↓
-Professor digita nome da criança → BotaoJogar()
+Professor seleciona Escola → Turma → Aluno
     ↓
-LudusMonitor.StartSession("nome")
+LudusMonitor.StartSession("nome do aluno")
     ↓
-Criança navega pelo Menu → SelectLevel
+Criança joga — LudusGameEvents registra cada ação
     ↓
-Criança escolhe categoria → CategorySelected("Fase01")
+LudusInputTracker registra cliques e caminho automaticamente
     ↓
-Canvas aleatório ativado → PhaseStarted("Canvas02")
+Criança completa a rodada → PhaseCompleted
     ↓
-Criança arrasta item → DragAttempt + CorrectMatch ou WrongMatch
+Professor clica em avançar → SessionEnded()
     ↓
-4 acertos → PhaseCompleted(acertos, erros, tempo, estrelas)
-    ↓
-Criança retorna ao SelectLevel ou encerra
-    ↓
-SessionEnded() → LudusExporter envia JSON ao backend
+LudusExporter envia JSON ao backend
     ↓ (se falhar)
 Salva localmente em persistentDataPath/ludus_offline/
 ```
 
 ---
 
-## Eventos semânticos (Para Que Serve?)
+## Eventos semânticos implementados
 
 | Evento                                        | Quando dispara                      |
 | --------------------------------------------- | ----------------------------------- |
-| `CategorySelected(category)`                  | Criança escolhe uma categoria       |
+| `CategorySelected(category)`                  | Criança escolhe categoria           |
 | `PhaseStarted(target, options[])`             | Novo Canvas de fase ativado         |
-| `DragAttempt(item, target, correct)`          | Criança arrasta qualquer item       |
+| `DragAttempt(item, target, correct)`          | Criança arrasta item                |
 | `CorrectMatch(item, timeSeconds)`             | Pareamento correto                  |
 | `WrongMatch(item, expected)`                  | Pareamento incorreto                |
 | `PhaseCompleted(acertos, erros, time, stars)` | 4 Canvas completados                |
@@ -187,7 +124,7 @@ Salva localmente em persistentDataPath/ludus_offline/
 
 ## Status do desenvolvimento
 
-### Etapa 1 — SDK Unity ✅
+### SDK Unity
 
 | Componente           | Status |
 | -------------------- | ------ |
@@ -199,22 +136,15 @@ Salva localmente em persistentDataPath/ludus_offline/
 | LudusClickable.cs    | ✅     |
 | LudusExporter.cs     | ✅     |
 
-### Etapa 1.5 — Integração no Para Que Serve? ✅
+### Integração no Para Que Serve?
 
 | Componente                                            | Status |
 | ----------------------------------------------------- | ------ |
-| Cena de identificação do jogador                      | ✅     |
+| Tela de identificação com seleção em cascata          | ✅     |
 | CategorySelected nos botões de categoria              | ✅     |
 | PhaseStarted / PhaseCompleted no SceneControl         | ✅     |
 | DragAttempt / CorrectMatch / WrongMatch no ItemColado | ✅     |
-
-### Próximas etapas
-
-| Etapa   | Descrição                            | Status |
-| ------- | ------------------------------------ | ------ |
-| Etapa 2 | Backend Node.js + Express + MongoDB  | 🔜     |
-| Etapa 3 | Dashboard React                      | 🔜     |
-| Etapa 4 | Análise ML com Python + scikit-learn | 🔜     |
+| SessionEnded ao retornar para SelectLevel             | ✅     |
 
 ---
 
