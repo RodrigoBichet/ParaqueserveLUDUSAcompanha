@@ -67,7 +67,7 @@ Assets/
 
 1. Seleciona o `LudusConfig.asset` em `Resources/LUDUS_SDK/` no Inspector
 2. Configura o `backendUrl` com a URL do servidor Node.js
-3. O GameObject do SDK (`LudusMonitor` + `LudusInputTracker` + `LudusExporter`) deve estar na cena `Identificacao`
+3. O GameObject do SDK deve estar na cena `Identificacao`
 
 | Campo                        | Descrição             | Padrão                  |
 | ---------------------------- | --------------------- | ----------------------- |
@@ -78,6 +78,20 @@ Assets/
 | `enableLocalFallback`        | Salva offline         | `true`                  |
 | `inactivityThresholdSeconds` | Threshold inatividade | `10`                    |
 | `debugMode`                  | Logs no Console       | `true`                  |
+
+---
+
+## Elementos com LudusClickable
+
+| Elemento                    | elementName                                            |
+| --------------------------- | ------------------------------------------------------ |
+| Botão jogar (identificação) | `btn_jogar_identificacao`                              |
+| Botão retry (identificação) | `btn_retry_identificacao`                              |
+| Botão jogar (menu)          | `btn_menu_jogar`                                       |
+| Botões de categoria         | `btn_categoria_acoes`, `btn_categoria_alimentos`, etc. |
+| Botão avançar canvas        | `btn_avancar_canvas`                                   |
+| Botão avançar feedback      | `btn_avancar`                                          |
+| Sliders de volume           | `slider_volume`                                        |
 
 ---
 
@@ -96,9 +110,9 @@ Criança joga — LudusGameEvents registra cada ação
     ↓
 LudusInputTracker registra cliques e caminho automaticamente
     ↓
-Criança completa a rodada → PhaseCompleted
+Criança completa os 4 Canvas → PhaseCompleted
     ↓
-Professor clica em avançar → SessionEnded()
+Professor clica em avançar no feedback → SessionEnded()
     ↓
 LudusExporter envia JSON ao backend
     ↓ (se falhar)
@@ -141,6 +155,8 @@ Salva localmente em persistentDataPath/ludus_offline/
 | Componente                                            | Status |
 | ----------------------------------------------------- | ------ |
 | Tela de identificação com seleção em cascata          | ✅     |
+| Feedback de erro e botão retry                        | ✅     |
+| LudusClickable em todos os botões e sliders           | ✅     |
 | CategorySelected nos botões de categoria              | ✅     |
 | PhaseStarted / PhaseCompleted no SceneControl         | ✅     |
 | DragAttempt / CorrectMatch / WrongMatch no ItemColado | ✅     |

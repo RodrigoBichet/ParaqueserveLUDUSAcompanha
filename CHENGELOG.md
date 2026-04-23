@@ -5,23 +5,40 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
-## [0.6.0] — 2026-04-20 — Seleção de aluno em cascata 🎉
+## [0.7.0] — 2026-04-20 — Identificação robusta + LudusClickable completo 🎉
 
 ### Atualizado
 
-- `IdentificacaoController.cs` — refatoração completa da tela de identificação
-    - Substituição do `TMP_InputField` por 3 `TMP_Dropdown` em cascata
-    - Busca escolas ao abrir a cena via `GET /api/unity/schools`
-    - Ao selecionar escola busca turmas via `GET /api/unity/groups/:schoolId`
-    - Ao selecionar turma busca alunos via `GET /api/unity/students/:groupId`
-    - Dropdowns desabilitados (`interactable = false`) até seleção anterior
-    - Botão Jogar só ativa quando aluno está selecionado
-    - `StartSession` chamado com nome real do aluno cadastrado no banco
+- `IdentificacaoController.cs` — melhorias de UX e robustez
+    - Feedback visual de loading durante cada busca ao backend
+    - Mensagem de erro clara quando backend está offline
+    - Mensagem de aviso quando não há dados cadastrados
+    - Botão retry para tentar reconectar sem reiniciar o jogo
+    - Timeout de 10 segundos nas requisições HTTP
+
+### Adicionado
+
+- `LudusClickable` em todos os botões e elementos interativos
+    - `btn_jogar_identificacao`, `btn_retry_identificacao`
+    - `btn_menu_jogar`
+    - `btn_categoria_acoes`, `btn_categoria_alimentos`, `btn_categoria_cotidiano`, `btn_categoria_diversao`, `btn_categoria_higiene`
+    - `btn_avancar_canvas`, `btn_avancar`
+    - `slider_volume`
+- Botões de voltar removidos durante gameplay — garante sessões completas
 
 ### Testado
 
-- Cascata completa: Escola → Turma → Aluno funcionando em tempo real
-- `Player: João Silva` aparecendo no log após seleção e confirmação
+- Backend offline — mensagem de erro e retry funcionando
+- Cliques registrando com nomes semânticos corretos
+
+---
+
+## [0.6.0] — 2026-04-20
+
+### Atualizado
+
+- `IdentificacaoController.cs` — seleção em cascata Escola → Turma → Aluno
+- Dropdowns com `interactable` em vez de `SetActive`
 
 ---
 
@@ -29,8 +46,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Corrigido
 
-- `Menu.cs` — `SessionEnded` disparado ao retornar para SelectLevel
-- Sessões reais chegando ao MongoDB com `durationMs` correto
+- `Menu.cs` — `SessionEnded` ao retornar para SelectLevel
+- Sessões com `durationMs` correto no MongoDB
 
 ---
 
@@ -38,19 +55,16 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado — Integração no Para Que Serve?
 
-- `Menu.cs` — `CategorySelected` filtrado para categorias reais
-- `SceneControl.cs` — `PhaseStarted` e `PhaseCompleted` com tempo real
-- `ItemColado.cs` — `DragAttempt`, `CorrectMatch`, `WrongMatch`
-- `IdentificacaoController.cs` — versão inicial com campo de texto
+- `Menu.cs`, `SceneControl.cs`, `ItemColado.cs` com eventos SDK
+- `IdentificacaoController.cs` versão inicial
 
 ---
 
 ## [0.3.0] — 2026-04-14
 
-### Adicionado — SDK completo
+### Adicionado
 
-- `LudusExporter.cs` — serialização JSON e envio HTTP com fallback offline
-- Conexão ao `LudusExporter` no `EndSession()`
+- `LudusExporter.cs` — envio HTTP + fallback offline
 
 ---
 
@@ -58,8 +72,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado
 
-- `LudusClickable.cs` — nomeação semântica de objetos
-- `LudusInputTracker.cs` — captura global de input com raycast
+- `LudusClickable.cs` e `LudusInputTracker.cs`
 
 ---
 
@@ -67,14 +80,11 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Adicionado — SDK inicial
 
-- `LudusConfig.cs` — ScriptableObject de configuração
-- `LudusSession.cs` — modelo de dados com UUID e timestamps ISO 8601
-- `LudusMonitor.cs` — Singleton DontDestroyOnLoad com detecção de inatividade
-- `LudusGameEvents.cs` — API pública com todos os eventos semânticos
+- `LudusConfig.cs`, `LudusSession.cs`, `LudusMonitor.cs`, `LudusGameEvents.cs`
 
 ---
 
 ## Próximas versões planejadas
 
-- `[0.7.0]` — Publicar backend em servidor real e atualizar `backendUrl`
+- `[0.8.0]` — Publicar backend em servidor real e atualizar `backendUrl`
 - `[1.0.0]` — Jogo testado nas escolas parceiras com dados reais
