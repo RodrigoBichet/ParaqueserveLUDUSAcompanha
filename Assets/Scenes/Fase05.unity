@@ -1424,7 +1424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &182401015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4658,6 +4658,7 @@ GameObject:
   - component: {fileID: 604287351}
   - component: {fileID: 604287353}
   - component: {fileID: 604287356}
+  - component: {fileID: 604287357}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -4804,6 +4805,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &604287357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604287350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &613321102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5571,7 +5585,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &696147986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6794,7 +6808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &778932222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7440,7 +7454,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &810132944
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7586,7 +7600,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &813738105
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8436,6 +8450,7 @@ GameObject:
   - component: {fileID: 941388889}
   - component: {fileID: 941388888}
   - component: {fileID: 941388891}
+  - component: {fileID: 941388892}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -8569,6 +8584,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &941388892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941388886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_feedback
 --- !u!1 &953276671
 GameObject:
   m_ObjectHideFlags: 0
@@ -9241,6 +9269,7 @@ GameObject:
   - component: {fileID: 1003540980}
   - component: {fileID: 1003540982}
   - component: {fileID: 1003540985}
+  - component: {fileID: 1003540986}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -9387,6 +9416,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1003540986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003540979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1017957850
 GameObject:
   m_ObjectHideFlags: 0
@@ -12257,6 +12299,7 @@ GameObject:
   - component: {fileID: 1323669125}
   - component: {fileID: 1323669127}
   - component: {fileID: 1323669130}
+  - component: {fileID: 1323669131}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -12403,6 +12446,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1323669131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1323669124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1366570822
 GameObject:
   m_ObjectHideFlags: 0
@@ -14482,6 +14538,7 @@ GameObject:
   - component: {fileID: 1690771674}
   - component: {fileID: 1690771676}
   - component: {fileID: 1690771679}
+  - component: {fileID: 1690771680}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -14628,6 +14685,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1690771680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1690771673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1690943643
 GameObject:
   m_ObjectHideFlags: 0
@@ -15584,6 +15654,7 @@ GameObject:
   - component: {fileID: 1784825776}
   - component: {fileID: 1784825778}
   - component: {fileID: 1784825781}
+  - component: {fileID: 1784825782}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -15730,6 +15801,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1784825782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1784825775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1802232629
 GameObject:
   m_ObjectHideFlags: 0
@@ -18018,6 +18102,7 @@ MonoBehaviour:
   - {fileID: 832104550}
   - {fileID: 924999843}
   cenaFinal: {fileID: 1646691695}
+  nomeCategoria: Categoria
 --- !u!1 &2113455399
 GameObject:
   m_ObjectHideFlags: 0

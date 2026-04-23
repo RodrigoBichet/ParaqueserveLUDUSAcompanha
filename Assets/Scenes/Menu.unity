@@ -354,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 65816126}
   - component: {fileID: 65816128}
+  - component: {fileID: 65816129}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -389,6 +390,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65816125}
   m_CullTransparentMesh: 1
+--- !u!114 &65816129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65816125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: arrastar_volume_musica_configuracoes
 --- !u!1 &114412420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,6 +1603,7 @@ GameObject:
   - component: {fileID: 266931149}
   - component: {fileID: 266931148}
   - component: {fileID: 266931152}
+  - component: {fileID: 266931153}
   m_Layer: 5
   m_Name: ButtonBack
   m_TagString: Untagged
@@ -1735,6 +1750,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 36
+--- !u!114 &266931153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266931146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_voltar_informacoes
 --- !u!1 &270686348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3051,6 +3079,7 @@ GameObject:
   - component: {fileID: 390447246}
   - component: {fileID: 390447245}
   - component: {fileID: 390447244}
+  - component: {fileID: 390447248}
   m_Layer: 5
   m_Name: ButtonExit
   m_TagString: Untagged
@@ -3184,6 +3213,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 390447242}
   m_CullTransparentMesh: 1
+--- !u!114 &390447248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 390447242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_menu_fechar
 --- !u!1 &408806052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3409,6 +3451,7 @@ GameObject:
   - component: {fileID: 427941868}
   - component: {fileID: 427941867}
   - component: {fileID: 427941870}
+  - component: {fileID: 427941871}
   m_Layer: 0
   m_Name: Instagram
   m_TagString: Untagged
@@ -3542,6 +3585,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 38
+--- !u!114 &427941871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427941865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_instagram_informacoes
 --- !u!1 &433443358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,7 +3847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
-  elementName: btn_teste
+  elementName: btn_menu_jogar
 --- !u!1 &461151642
 GameObject:
   m_ObjectHideFlags: 0
@@ -4459,6 +4515,7 @@ GameObject:
   - component: {fileID: 665851779}
   - component: {fileID: 665851778}
   - component: {fileID: 665851781}
+  - component: {fileID: 665851782}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -4592,6 +4649,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 5
+--- !u!114 &665851782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 665851776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_menu_tutorial
 --- !u!1 &673256027
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,7 +4681,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &673256028
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5559,6 +5629,7 @@ GameObject:
   - component: {fileID: 816084431}
   - component: {fileID: 816084430}
   - component: {fileID: 816084433}
+  - component: {fileID: 816084434}
   m_Layer: 0
   m_Name: ButtonConfirm
   m_TagString: Untagged
@@ -5692,6 +5763,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 56
+--- !u!114 &816084434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816084428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_confirmar_tema_configuracoes
 --- !u!1 &839128291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6601,6 +6685,7 @@ GameObject:
   - component: {fileID: 929339748}
   - component: {fileID: 929339747}
   - component: {fileID: 929339746}
+  - component: {fileID: 929339749}
   m_Layer: 0
   m_Name: ButtonTemaNormal
   m_TagString: Untagged
@@ -6721,6 +6806,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 929339744}
   m_CullTransparentMesh: 1
+--- !u!114 &929339749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929339744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_tema_normal_configuracoes
 --- !u!1 &931938903
 GameObject:
   m_ObjectHideFlags: 0
@@ -9291,6 +9389,7 @@ GameObject:
   - component: {fileID: 1215118464}
   - component: {fileID: 1215118467}
   - component: {fileID: 1215118468}
+  - component: {fileID: 1215118469}
   m_Layer: 5
   m_Name: ButtonConfig
   m_TagString: Untagged
@@ -9437,6 +9536,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 6
+--- !u!114 &1215118469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215118461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_menu_configuracoes
 --- !u!1 &1240965822
 GameObject:
   m_ObjectHideFlags: 0
@@ -9526,6 +9638,7 @@ GameObject:
   - component: {fileID: 1244780253}
   - component: {fileID: 1244780252}
   - component: {fileID: 1244780256}
+  - component: {fileID: 1244780257}
   m_Layer: 5
   m_Name: ButtonInfo
   m_TagString: Untagged
@@ -9672,6 +9785,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 13
+--- !u!114 &1244780257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244780250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_menu_informacoes
 --- !u!1 &1253323896
 GameObject:
   m_ObjectHideFlags: 0
@@ -10394,6 +10520,7 @@ GameObject:
   - component: {fileID: 1434000739}
   - component: {fileID: 1434000738}
   - component: {fileID: 1434000742}
+  - component: {fileID: 1434000743}
   m_Layer: 5
   m_Name: ButtonBack
   m_TagString: Untagged
@@ -10540,6 +10667,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 36
+--- !u!114 &1434000743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434000736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_voltar_configuracoes_menu
 --- !u!1 &1439347476
 GameObject:
   m_ObjectHideFlags: 0
@@ -11555,6 +11695,7 @@ GameObject:
   - component: {fileID: 1608823330}
   - component: {fileID: 1608823329}
   - component: {fileID: 1608823332}
+  - component: {fileID: 1608823333}
   m_Layer: 0
   m_Name: Site
   m_TagString: Untagged
@@ -11688,6 +11829,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 37
+--- !u!114 &1608823333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608823327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_site_informacoes
 --- !u!1 &1609729912
 GameObject:
   m_ObjectHideFlags: 0
@@ -12402,6 +12556,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760184541}
   - component: {fileID: 1760184543}
+  - component: {fileID: 1760184544}
   m_Layer: 0
   m_Name: Handle
   m_TagString: Untagged
@@ -12437,6 +12592,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760184540}
   m_CullTransparentMesh: 1
+--- !u!114 &1760184544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760184540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: arrastar_volume_geral_configuracoes
 --- !u!1 &1766330725
 GameObject:
   m_ObjectHideFlags: 0
@@ -12627,6 +12795,7 @@ GameObject:
   - component: {fileID: 1807768632}
   - component: {fileID: 1807768631}
   - component: {fileID: 1807768634}
+  - component: {fileID: 1807768635}
   m_Layer: 0
   m_Name: ButtonCancel
   m_TagString: Untagged
@@ -12760,6 +12929,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 57
+--- !u!114 &1807768635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807768629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_cancelar_tema_configuracoes
 --- !u!1 &1807920334
 GameObject:
   m_ObjectHideFlags: 0
@@ -13280,6 +13462,7 @@ GameObject:
   - component: {fileID: 1862955206}
   - component: {fileID: 1862955205}
   - component: {fileID: 1862955204}
+  - component: {fileID: 1862955207}
   m_Layer: 0
   m_Name: ButtonTemaAutismo
   m_TagString: Untagged
@@ -13400,6 +13583,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862955202}
   m_CullTransparentMesh: 1
+--- !u!114 &1862955207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862955202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_tema_autismo_configuracoes
 --- !u!1 &1867521271
 GameObject:
   m_ObjectHideFlags: 0
@@ -14918,7 +15114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3136195145898968623, guid: 536b6b674415613429f6df08388e23f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6530484241128371329, guid: 536b6b674415613429f6df08388e23f9, type: 3}
       propertyPath: m_Color.a

@@ -173,7 +173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3136195145898968623, guid: 536b6b674415613429f6df08388e23f9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 125918983}
   - component: {fileID: 125918982}
   - component: {fileID: 125918981}
+  - component: {fileID: 125918984}
   m_Layer: 5
   m_Name: FASE 03 TRANSPARENTE
   m_TagString: Untagged
@@ -445,6 +446,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125918979}
   m_CullTransparentMesh: 1
+--- !u!114 &125918984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125918979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_categorias_cotidiano
 --- !u!1 &184919110
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +584,7 @@ GameObject:
   - component: {fileID: 244671623}
   - component: {fileID: 244671622}
   - component: {fileID: 244671625}
+  - component: {fileID: 244671626}
   m_Layer: 5
   m_Name: ButtonBack
   m_TagString: Untagged
@@ -703,6 +718,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 36
+--- !u!114 &244671626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244671620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_voltar_categorias
 --- !u!1 &309651953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2222,6 +2250,7 @@ GameObject:
   - component: {fileID: 1500157943}
   - component: {fileID: 1500157942}
   - component: {fileID: 1500157941}
+  - component: {fileID: 1500157944}
   m_Layer: 5
   m_Name: FASE 05  TRANSPARENTE
   m_TagString: Untagged
@@ -2342,6 +2371,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1500157939}
   m_CullTransparentMesh: 1
+--- !u!114 &1500157944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500157939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_categorias_higiene
 --- !u!1 &1512791648
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3067,7 @@ GameObject:
   - component: {fileID: 1960346809}
   - component: {fileID: 1960346808}
   - component: {fileID: 1960346807}
+  - component: {fileID: 1960346810}
   m_Layer: 5
   m_Name: FASE 02 TRANSPARENTE
   m_TagString: Untagged
@@ -3145,6 +3188,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1960346804}
   m_CullTransparentMesh: 1
+--- !u!114 &1960346810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960346804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_categorias_alimentos
 --- !u!1 &1963840298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,6 +3417,7 @@ GameObject:
   - component: {fileID: 2038452440}
   - component: {fileID: 2038452439}
   - component: {fileID: 2038452438}
+  - component: {fileID: 2038452441}
   m_Layer: 5
   m_Name: FASE 01 TRANSPARENTE
   m_TagString: Untagged
@@ -3481,6 +3538,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2038452435}
   m_CullTransparentMesh: 1
+--- !u!114 &2038452441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2038452435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_categorias_acoes
 --- !u!1 &2108262003
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,6 +3563,7 @@ GameObject:
   - component: {fileID: 2108262007}
   - component: {fileID: 2108262006}
   - component: {fileID: 2108262005}
+  - component: {fileID: 2108262008}
   m_Layer: 5
   m_Name: FASE 04  TRANSPARENTE
   m_TagString: Untagged
@@ -3613,6 +3684,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108262003}
   m_CullTransparentMesh: 1
+--- !u!114 &2108262008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108262003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_categorias_diversao
 --- !u!1 &2114525905
 GameObject:
   m_ObjectHideFlags: 0

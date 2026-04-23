@@ -949,6 +949,7 @@ GameObject:
   - component: {fileID: 100281144}
   - component: {fileID: 100281143}
   - component: {fileID: 100281146}
+  - component: {fileID: 100281147}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -1082,6 +1083,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &100281147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100281141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_feedback
 --- !u!1 &123955483
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,6 +1199,7 @@ GameObject:
   - component: {fileID: 129960832}
   - component: {fileID: 129960834}
   - component: {fileID: 129960837}
+  - component: {fileID: 129960838}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -1331,6 +1346,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &129960838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129960831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &143639577
 GameObject:
   m_ObjectHideFlags: 0
@@ -4254,6 +4282,7 @@ GameObject:
   - component: {fileID: 513479345}
   - component: {fileID: 513479344}
   - component: {fileID: 513479348}
+  - component: {fileID: 513479349}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -4400,6 +4429,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &513479349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 513479342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &516899185
 GameObject:
   m_ObjectHideFlags: 0
@@ -4419,7 +4461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &516899186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8135,7 +8177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &835397330
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11203,6 +11245,7 @@ GameObject:
   - component: {fileID: 1215422100}
   - component: {fileID: 1215422102}
   - component: {fileID: 1215422105}
+  - component: {fileID: 1215422106}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -11349,6 +11392,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1215422106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1215422099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1245135495
 GameObject:
   m_ObjectHideFlags: 0
@@ -11541,6 +11597,7 @@ GameObject:
   - component: {fileID: 1279470729}
   - component: {fileID: 1279470731}
   - component: {fileID: 1279470734}
+  - component: {fileID: 1279470735}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -11687,6 +11744,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1279470735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279470728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1305248492
 GameObject:
   m_ObjectHideFlags: 0
@@ -12040,7 +12110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1352637997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12664,6 +12734,7 @@ GameObject:
   - component: {fileID: 1468630693}
   - component: {fileID: 1468630695}
   - component: {fileID: 1468630698}
+  - component: {fileID: 1468630699}
   m_Layer: 5
   m_Name: ButtonNext
   m_TagString: Untagged
@@ -12810,6 +12881,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ThemeSpriteApplier
   spriteRole: 3
+--- !u!114 &1468630699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468630692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761ed76c867291e4aa9b0f089177d6e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LudusSDK.LudusClickable
+  elementName: btn_avancar_canvas
 --- !u!1 &1491274925
 GameObject:
   m_ObjectHideFlags: 0
@@ -12986,7 +13070,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506377566
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13929,7 +14013,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1590326167
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17933,6 +18017,7 @@ MonoBehaviour:
   - {fileID: 1550613527}
   - {fileID: 1439564463}
   cenaFinal: {fileID: 467633456}
+  nomeCategoria: Categoria
 --- !u!1 &2122328115
 GameObject:
   m_ObjectHideFlags: 0
