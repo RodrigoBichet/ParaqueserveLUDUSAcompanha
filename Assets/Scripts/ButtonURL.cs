@@ -7,7 +7,7 @@ public class ButtonURL : MonoBehaviour
     // Start is called before the first frame update
     public void OpenUrlWeb()
     {
-        Application.OpenURL("https://linktr.ee/maisludus");
+        Application.OpenURL("https://site-ludus.vercel.app/");
         Debug.Log("Abriu o site");
     }
 
