@@ -6,13 +6,17 @@ using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public Image[] imageComponents; // Array de referências aos componentes de imagem
-    public Sprite[] images; // Array para armazenar as imagens
-    public AudioClip[] audioClips; // Array para armazenar os áudios correspondentes
+    public Image[] imageComponents;
+    public Sprite[] images;
+    public AudioClip[] audioClips;
+
+    // Propriedades públicas para o SceneControl ler após a cena ser ativada
+    public string ItemCorreto { get; private set; }
+    public string[] Opcoes { get; private set; }
 
     void Start()
     {
-        List<Sprite> imagensDisponiveis = new List<Sprite>(images); // Cria uma lista das imagens disponíveis
+        List<Sprite> imagensDisponiveis = new List<Sprite>(images);
         bool aguaEscolhida = false;
 
         for (int i = 0; i < imageComponents.Length; i++)
@@ -21,33 +25,38 @@ public class NewBehaviourScript : MonoBehaviour
 
             if (imagensDisponiveis[indiceImagem] == images[0])
             {
-                imageComponents[i].sprite = images[0]; // Atribui "Agua"
-                imageComponents[i].gameObject.tag = "agua"; // Adiciona a tag "agua"
+                imageComponents[i].sprite = images[0];
+                imageComponents[i].gameObject.tag = "agua";
                 aguaEscolhida = true;
             }
             else
             {
                 imageComponents[i].sprite = imagensDisponiveis[indiceImagem];
-                imageComponents[i].gameObject.tag = "tagerrada"; // Adiciona a tag "tagerrada"
+                imageComponents[i].gameObject.tag = "tagerrada";
             }
 
-            // Associa o áudio correto à imagem
             AudioSource audioSource = imageComponents[i].gameObject.GetComponent<AudioSource>();
             audioSource.clip = audioClips[Array.IndexOf(images, imagensDisponiveis[indiceImagem])];
 
-            imagensDisponiveis.RemoveAt(indiceImagem); // Remove a imagem escolhida da lista de opções
+            imagensDisponiveis.RemoveAt(indiceImagem);
         }
 
-        // Se a água não foi escolhida ainda, substitui uma imagem aleatória pela "Agua"
         if (!aguaEscolhida)
         {
             int indiceAleatorio = UnityEngine.Random.Range(0, imageComponents.Length);
             imageComponents[indiceAleatorio].sprite = images[0];
-            imageComponents[indiceAleatorio].gameObject.tag = "agua"; // Adiciona a tag "agua"
+            imageComponents[indiceAleatorio].gameObject.tag = "agua";
 
-            // Associa o áudio correto à imagem
             AudioSource audioSource = imageComponents[indiceAleatorio].gameObject.GetComponent<AudioSource>();
-            audioSource.clip = audioClips[0]; // Áudio correspondente à "Agua"
+            audioSource.clip = audioClips[0];
         }
+
+        // Salva o item correto (images[0] é sempre o correto)
+        ItemCorreto = images[0].name;
+
+        // Salva os nomes de todas as opções exibidas
+        Opcoes = new string[imageComponents.Length];
+        for (int i = 0; i < imageComponents.Length; i++)
+            Opcoes[i] = imageComponents[i].sprite != null ? imageComponents[i].sprite.name : "";
     }
 }
