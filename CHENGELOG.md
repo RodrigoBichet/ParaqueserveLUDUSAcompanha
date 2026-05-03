@@ -5,7 +5,21 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
-## [0.7.0] — 2026-04-20 — Identificação robusta + LudusClickable completo 🎉
+## [0.8.0] — 2026-05-02 — Fix bug de sessão múltipla por categoria
+
+### Corrigido
+
+- `LudusMonitor.cs` — adiciona campo `_currentPlayerId` para persistir jogador entre sessões
+- `LudusMonitor.cs` — adiciona método `DefinirJogador()` — registra jogador sem iniciar sessão, separando identificação de início de sessão
+- `LudusMonitor.cs` — simplifica `ReiniciarSessao()` — remove `EndSession()` automático que gerava sessão vazia extra a cada nova categoria
+- `LudusGameEvents.cs` — adiciona `DefinirJogador()` — API pública chamada pela tela de identificação
+- `LudusGameEvents.cs` — adiciona `NovaSessaoCategoria()` — reinicia sessão e registra categoria em uma única chamada
+- `Menu.cs` — substitui chamada de `CategorySelected()` por `NovaSessaoCategoria()` ao selecionar categoria
+- `IdentificacaoController.cs` — substitui `StartSession()` por `DefinirJogador()`, sessão não é mais aberta na identificação
+
+---
+
+## [0.7.0] — 2026-04-20 — Identificação robusta + LudusClickable completo
 
 ### Atualizado
 
@@ -86,5 +100,5 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[0.8.0]` — Publicar backend em servidor real e atualizar `backendUrl`
+- `[0.9.0]` — Publicar backend em servidor real e atualizar `backendUrl`
 - `[1.0.0]` — Jogo testado nas escolas parceiras com dados reais

@@ -37,7 +37,7 @@ Assets/
 │   │   └── LudusExporter.cs      ← Serialização e envio HTTP
 │   └── (scripts do jogo)
 │       ├── IdentificacaoController.cs  ← Seleção de aluno em cascata
-│       ├── Menu.cs                     ← Navegação + CategorySelected
+│       ├── Menu.cs                     ← Navegação + NovaSessaoCategoria
 │       ├── SceneControl.cs             ← PhaseStarted + PhaseCompleted
 │       └── ItemColado.cs               ← CorrectMatch + WrongMatch
 └── Resources/
@@ -104,7 +104,11 @@ LudusExporter verifica e reenvia sessões pendentes
     ↓
 Professor seleciona Escola → Turma → Aluno
     ↓
-LudusMonitor.StartSession("nome do aluno")
+LudusGameEvents.DefinirJogador("nome do aluno")   ← apenas registra, sem iniciar sessão
+    ↓
+Criança seleciona categoria
+    ↓
+LudusGameEvents.NovaSessaoCategoria("Ações")      ← inicia sessão + registra categoria
     ↓
 Criança joga — LudusGameEvents registra cada ação
     ↓
@@ -117,6 +121,8 @@ Professor clica em avançar no feedback → SessionEnded()
 LudusExporter envia JSON ao backend
     ↓ (se falhar)
 Salva localmente em persistentDataPath/ludus_offline/
+    ↓
+Criança seleciona nova categoria → NovaSessaoCategoria() → nova sessão independente
 ```
 
 ---
@@ -125,7 +131,8 @@ Salva localmente em persistentDataPath/ludus_offline/
 
 | Evento                                        | Quando dispara                      |
 | --------------------------------------------- | ----------------------------------- |
-| `CategorySelected(category)`                  | Criança escolhe categoria           |
+| `DefinirJogador(playerId)`                    | Aluno selecionado na identificação  |
+| `NovaSessaoCategoria(category)`               | Criança escolhe categoria           |
 | `PhaseStarted(target, options[])`             | Novo Canvas de fase ativado         |
 | `DragAttempt(item, target, correct)`          | Criança arrasta item                |
 | `CorrectMatch(item, timeSeconds)`             | Pareamento correto                  |
@@ -157,10 +164,12 @@ Salva localmente em persistentDataPath/ludus_offline/
 | Tela de identificação com seleção em cascata          | ✅     |
 | Feedback de erro e botão retry                        | ✅     |
 | LudusClickable em todos os botões e sliders           | ✅     |
-| CategorySelected nos botões de categoria              | ✅     |
+| DefinirJogador na tela de identificação               | ✅     |
+| NovaSessaoCategoria nos botões de categoria           | ✅     |
 | PhaseStarted / PhaseCompleted no SceneControl         | ✅     |
 | DragAttempt / CorrectMatch / WrongMatch no ItemColado | ✅     |
 | SessionEnded ao retornar para SelectLevel             | ✅     |
+| Sessão independente por categoria jogada              | ✅     |
 
 ---
 
