@@ -23,13 +23,15 @@ public class Menu : MonoBehaviour
             LudusSDK.LudusGameEvents.SessionEnded();
         }
 
-        // Só registra CategorySelected para cenas de categoria real
+        // Ao selecionar uma categoria, reinicia a sessão e registra o evento
         string[] categorias = { "Fase01", "Fase02", "Fase03", "Fase04", "Fase05" };
         if (System.Array.Exists(categorias, c => c == cena))
         {
-            // Passa o nome amigável em vez do nome interno da cena
             string nomeAmigavel = NomeCategoria.ContainsKey(cena) ? NomeCategoria[cena] : cena;
-            LudusSDK.LudusGameEvents.CategorySelected(nomeAmigavel);
+
+            // ALTERADO — era CategorySelected(), agora usa NovaSessaoCategoria()
+            // para garantir que uma nova sessão seja iniciada a cada categoria
+            LudusSDK.LudusGameEvents.NovaSessaoCategoria(nomeAmigavel);
         }
 
         SceneManager.LoadScene(cena);
@@ -39,4 +41,6 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
 }

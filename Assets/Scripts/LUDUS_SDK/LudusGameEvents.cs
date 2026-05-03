@@ -26,6 +26,23 @@ namespace LudusSDK
         // Exemplo: LudusGameEvents.CategorySelected("Alimentos");
         // =========================================================================
 
+        // =========================================================================
+        // DefinirJogador
+        // Registra o jogador atual SEM iniciar sessão.
+        // Chamado pela tela de identificação. A sessão só começa quando
+        // uma categoria é selecionada via NovaSessaoCategoria().
+        // =========================================================================
+        public static void DefinirJogador(string playerId)
+        {
+            if (LudusMonitor.Instance == null)
+            {
+                Debug.LogError("[LUDUS] LudusMonitor não encontrado.");
+                return;
+            }
+
+            LudusMonitor.Instance.DefinirJogador(playerId);
+        }
+
         public static void CategorySelected(string category)
         {
             if (!ValidarMonitor("CategorySelected")) return;
@@ -182,5 +199,25 @@ namespace LudusSDK
 
             return true;
         }
+
+        // =========================================================================
+        // NovaSessaoCategoria
+        // Reinicia a sessão e registra a categoria selecionada.
+        // Chamado pelo Menu ao entrar em uma nova categoria após a sessão anterior
+        // já ter sido encerrada. Garante que cada categoria gere uma sessão própria.
+        // =========================================================================
+
+        public static void NovaSessaoCategoria(string categoria)
+        {
+            if (LudusMonitor.Instance == null)
+            {
+                Debug.LogError("[LUDUS] LudusMonitor não encontrado.");
+                return;
+            }
+
+            LudusMonitor.Instance.ReiniciarSessao();
+            CategorySelected(categoria); // Registra o evento normalmente
+        }
     }
+
 }

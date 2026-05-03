@@ -41,6 +41,9 @@ namespace LudusSDK
         private bool _inactivityDispatched;    // Evita disparar inatividade múltiplas vezes
         private bool _sessionActive;           // Sessão está em andamento?
 
+        // Guarda o jogador atual entre sessões
+        private string _currentPlayerId;
+
         // -------------------------------------------------------------------------
         // Propriedade pública para leitura da sessão (somente leitura)
         // -------------------------------------------------------------------------
@@ -104,7 +107,6 @@ namespace LudusSDK
         // =========================================================================
         // StartSession
         // Inicia uma nova sessão de jogo para um jogador
-        // Chamado pela cena de identificação (ou temporariamente com "jogador_teste")
         // =========================================================================
 
         public void StartSession(string playerId)
@@ -121,10 +123,10 @@ namespace LudusSDK
                 return;
             }
 
-            // Cria a sessão com os dados do config + playerId recebido
-            _currentSession = new LudusSession(playerId, _config.gameId, _config.gameVersion);
+            // Persiste o jogador para reutilizar entre categorias
+            _currentPlayerId = playerId;
 
-            // Inicializa controles de tempo
+            _currentSession = new LudusSession(playerId, _config.gameId, _config.gameVersion);
             _sessionStartTime = Time.time;
             _lastActionTime = Time.time;
             _inactivityDispatched = false;
@@ -133,6 +135,42 @@ namespace LudusSDK
             if (_config.debugMode)
                 Debug.Log("[LUDUS] Sessão iniciada. Player: " + playerId +
                         " | ID: " + _currentSession.sessionId);
+        }
+
+        // =========================================================================
+        // DefinirJogador
+        // Apenas guarda o playerId sem iniciar sessão.
+        // A sessão só é criada quando o jogador seleciona uma categoria.
+        // =========================================================================
+        public void DefinirJogador(string playerId)
+        {
+            _currentPlayerId = playerId;
+
+            if (_config.debugMode)
+                Debug.Log("[LUDUS] Jogador definido (sem sessão iniciada): " + playerId);
+        }
+
+        // =========================================================================
+        // ReiniciarSessao
+        // Inicia uma nova sessão para o mesmo jogador da sessão anterior.
+        // Chamado ao selecionar uma nova categoria sem passar pela identificação.
+        // =========================================================================
+
+        // =========================================================================
+        // ReiniciarSessao
+        // Inicia uma nova sessão para o jogador já definido via DefinirJogador().
+        // Chamado por NovaSessaoCategoria() a cada nova categoria selecionada.
+        // =========================================================================
+        public void ReiniciarSessao()
+        {
+            if (string.IsNullOrEmpty(_currentPlayerId))
+            {
+                Debug.LogError("[LUDUS] Impossível reiniciar sessão: nenhum jogador definido. " +
+                               "Chame DefinirJogador() antes de selecionar uma categoria.");
+                return;
+            }
+
+            StartSession(_currentPlayerId);
         }
 
         // =========================================================================
