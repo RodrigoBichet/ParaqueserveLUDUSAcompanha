@@ -36,7 +36,7 @@ public class GameManagerAcao : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Verifica se a cena carregada é "Fase01"
-        if (scene.name == "Fase06")
+        if (scene.name == "Fase01")
         {
             // Zera o contador de erros
             errorCountAcao = 0;
