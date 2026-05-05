@@ -5,6 +5,26 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [0.9.0] — 2026-05-04 — Troca de aluno entre sessões
+
+### Adicionado
+
+- `Menu.cs` — método `VoltarIdentificacao()` para troca de aluno sem fechar o jogo
+    - Encerra sessão ativa (se houver) antes de sair, garantindo que nenhum dado seja perdido
+    - Limpa PlayerPrefs do aluno anterior
+    - Preserva configurações do dispositivo: volume (`Master`, `Music`) e tema (`theme`)
+    - Reseta feedback estático em memória das 5 categorias (`resultadoAvaliacao`)
+    - Carrega cena de Identificacao pronta para novo aluno
+- Botão "Trocar Aluno" adicionado nas cenas Menu e SelectLevel apontando para `VoltarIdentificacao()`
+
+### Corrigido
+
+- `SoundControl.cs` — detecção de primeira execução corrigida
+    - Substituído `GetFloat("Master") == 0f` por `HasKey("Master")` — evita confundir volume zerado com ausência de configuração
+    - Volume real aplicado ao carregar valores salvos (`AudioListener.volume` e `AudioSource.volume`)
+
+---
+
 ## [0.8.0] — 2026-05-02 — Fix bug de sessão múltipla por categoria
 
 ### Corrigido
@@ -100,5 +120,5 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[0.9.0]` — Publicar backend em servidor real e atualizar `backendUrl`
-- `[1.0.0]` — Jogo testado nas escolas parceiras com dados reais
+- `[1.0.0]` — Publicar backend em servidor real e atualizar `backendUrl`
+- `[1.1.0]` — Jogo testado nas escolas parceiras com dados reais

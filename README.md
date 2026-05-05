@@ -37,9 +37,10 @@ Assets/
 │   │   └── LudusExporter.cs      ← Serialização e envio HTTP
 │   └── (scripts do jogo)
 │       ├── IdentificacaoController.cs  ← Seleção de aluno em cascata
-│       ├── Menu.cs                     ← Navegação + NovaSessaoCategoria
+│       ├── Menu.cs                     ← Navegação, NovaSessaoCategoria e VoltarIdentificacao
 │       ├── SceneControl.cs             ← PhaseStarted + PhaseCompleted
-│       └── ItemColado.cs               ← CorrectMatch + WrongMatch
+│       ├── ItemColado.cs               ← CorrectMatch + WrongMatch
+│       └── SoundControl.cs             ← Controle de volume persistente
 └── Resources/
     └── LUDUS_SDK/
         └── LudusConfig.asset     ← Asset de configuração
@@ -123,6 +124,8 @@ LudusExporter envia JSON ao backend
 Salva localmente em persistentDataPath/ludus_offline/
     ↓
 Criança seleciona nova categoria → NovaSessaoCategoria() → nova sessão independente
+    ↓ (troca de aluno)
+Professor clica "Trocar Aluno" → VoltarIdentificacao() → sessão encerrada + dados limpos
 ```
 
 ---
@@ -170,6 +173,8 @@ Criança seleciona nova categoria → NovaSessaoCategoria() → nova sessão ind
 | DragAttempt / CorrectMatch / WrongMatch no ItemColado | ✅     |
 | SessionEnded ao retornar para SelectLevel             | ✅     |
 | Sessão independente por categoria jogada              | ✅     |
+| Troca de aluno com reset de dados e sessão            | ✅     |
+| Volume persistente corrigido entre alunos             | ✅     |
 
 ---
 
