@@ -13,7 +13,7 @@ public class IdentificacaoController : MonoBehaviour
     // -------------------------------------------------------------------------
 
     [Header("Dropdowns")]
-    public TMP_Dropdown dropdownEscola;
+    public TMP_Dropdown dropdownInstituicao;
     public TMP_Dropdown dropdownTurma;
     public TMP_Dropdown dropdownAluno;
 
@@ -36,7 +36,7 @@ public class IdentificacaoController : MonoBehaviour
     // Dados internos
     // -------------------------------------------------------------------------
 
-    private List<string> _escolaIds = new List<string>();
+    private List<string> _instituicaoIds = new List<string>();
     private List<string> _turmaIds = new List<string>();
     private List<string> _alunoIds = new List<string>();
     private List<string> _alunoNomes = new List<string>();
@@ -47,19 +47,16 @@ public class IdentificacaoController : MonoBehaviour
 
     private void Start()
     {
-        // Estado inicial
-        dropdownEscola.interactable = false;
+        dropdownInstituicao.interactable = false;
         dropdownTurma.interactable = false;
         dropdownAluno.interactable = false;
         botaoJogar.GetComponent<UnityEngine.UI.Button>().interactable = false;
         botaoRetry.SetActive(false);
 
-        // Listeners
-        dropdownEscola.onValueChanged.AddListener(OnEscolaSelected);
+        dropdownInstituicao.onValueChanged.AddListener(OnInstituicaoSelected);
         dropdownTurma.onValueChanged.AddListener(OnTurmaSelected);
 
-        // Busca escolas
-        StartCoroutine(BuscarEscolas());
+        StartCoroutine(BuscarInstituicoes());
     }
 
     // =========================================================================
@@ -71,8 +68,8 @@ public class IdentificacaoController : MonoBehaviour
         if (textoStatus == null) return;
         textoStatus.text = mensagem;
         textoStatus.color = erro
-            ? new Color(0.9f, 0.3f, 0.3f)   // vermelho
-            : new Color(0.4f, 0.4f, 0.4f);  // cinza
+            ? new Color(0.9f, 0.3f, 0.3f)
+            : new Color(0.4f, 0.4f, 0.4f);
     }
 
     private void LimparStatus()
@@ -81,65 +78,65 @@ public class IdentificacaoController : MonoBehaviour
     }
 
     // =========================================================================
-    // BuscarEscolas
+    // BuscarInstituicoes
     // =========================================================================
 
-    private IEnumerator BuscarEscolas()
+    private IEnumerator BuscarInstituicoes()
     {
-        MostrarStatus("Carregando escolas...");
+        MostrarStatus("Carregando instituições...");
         botaoRetry.SetActive(false);
-        dropdownEscola.interactable = false;
+        dropdownInstituicao.interactable = false;
 
         string url = backendUrl + "/api/unity/schools";
 
         using (UnityWebRequest req = UnityWebRequest.Get(url))
         {
-            req.timeout = 10; // timeout de 10 segundos
+            req.timeout = 10;
 
             yield return req.SendWebRequest();
 
             if (req.result != UnityWebRequest.Result.Success)
             {
-                MostrarStatus("❌ Servidor indisponível. Verifique a conexão.", erro: true);
+                MostrarStatus("Servidor indisponível. Verifique a conexão.", erro: true);
                 botaoRetry.SetActive(true);
-                Debug.LogError("[LUDUS] Erro ao buscar escolas: " + req.error);
+                Debug.LogError("[LUDUS] Erro ao buscar instituições: " + req.error);
                 yield break;
             }
 
-            EscolasResponse resposta = JsonUtility.FromJson<EscolasResponse>(req.downloadHandler.text);
+            InstituicoesResponse resposta = JsonUtility.FromJson<InstituicoesResponse>(req.downloadHandler.text);
 
             if (resposta.escolas == null || resposta.escolas.Count == 0)
             {
-                MostrarStatus("⚠️ Nenhuma escola cadastrada no sistema.", erro: true);
+                MostrarStatus("Nenhuma instituição cadastrada no sistema.", erro: true);
                 botaoRetry.SetActive(true);
                 yield break;
             }
 
-            dropdownEscola.ClearOptions();
-            _escolaIds.Clear();
+            dropdownInstituicao.ClearOptions();
+            _instituicaoIds.Clear();
 
             var opcoes = new List<string>();
-            opcoes.Add("Selecione a escola...");
-            _escolaIds.Add("");
+            opcoes.Add("Selecione a instituição...");
+            _instituicaoIds.Add("");
 
-            foreach (var escola in resposta.escolas)
+            foreach (var instituicao in resposta.escolas)
             {
-                opcoes.Add(escola.name);
-                _escolaIds.Add(escola._id);
+                opcoes.Add(instituicao.name);
+                _instituicaoIds.Add(instituicao._id);
             }
 
-            dropdownEscola.AddOptions(opcoes);
-            dropdownEscola.value = 0;
-            dropdownEscola.interactable = true;
+            dropdownInstituicao.AddOptions(opcoes);
+            dropdownInstituicao.value = 0;
+            dropdownInstituicao.interactable = true;
             LimparStatus();
         }
     }
 
     // =========================================================================
-    // OnEscolaSelected
+    // OnInstituicaoSelected
     // =========================================================================
 
-    private void OnEscolaSelected(int index)
+    private void OnInstituicaoSelected(int index)
     {
         dropdownTurma.ClearOptions();
         dropdownAluno.ClearOptions();
@@ -150,19 +147,19 @@ public class IdentificacaoController : MonoBehaviour
 
         if (index == 0) return;
 
-        string escolaId = _escolaIds[index];
-        StartCoroutine(BuscarTurmas(escolaId));
+        string instituicaoId = _instituicaoIds[index];
+        StartCoroutine(BuscarTurmas(instituicaoId));
     }
 
     // =========================================================================
     // BuscarTurmas
     // =========================================================================
 
-    private IEnumerator BuscarTurmas(string escolaId)
+    private IEnumerator BuscarTurmas(string instituicaoId)
     {
         MostrarStatus("Carregando turmas...");
 
-        string url = backendUrl + "/api/unity/groups/" + escolaId;
+        string url = backendUrl + "/api/unity/groups/" + instituicaoId;
 
         using (UnityWebRequest req = UnityWebRequest.Get(url))
         {
@@ -172,7 +169,7 @@ public class IdentificacaoController : MonoBehaviour
 
             if (req.result != UnityWebRequest.Result.Success)
             {
-                MostrarStatus("❌ Erro ao carregar turmas. Tente novamente.", erro: true);
+                MostrarStatus("Erro ao carregar turmas. Tente novamente.", erro: true);
                 botaoRetry.SetActive(true);
                 yield break;
             }
@@ -181,7 +178,7 @@ public class IdentificacaoController : MonoBehaviour
 
             if (resposta.turmas == null || resposta.turmas.Count == 0)
             {
-                MostrarStatus("⚠️ Nenhuma turma cadastrada nesta escola.", erro: true);
+                MostrarStatus("Nenhuma turma cadastrada nesta instituição.", erro: true);
                 yield break;
             }
 
@@ -240,7 +237,7 @@ public class IdentificacaoController : MonoBehaviour
 
             if (req.result != UnityWebRequest.Result.Success)
             {
-                MostrarStatus("❌ Erro ao carregar alunos. Tente novamente.", erro: true);
+                MostrarStatus("Erro ao carregar alunos. Tente novamente.", erro: true);
                 botaoRetry.SetActive(true);
                 yield break;
             }
@@ -249,7 +246,7 @@ public class IdentificacaoController : MonoBehaviour
 
             if (resposta.alunos == null || resposta.alunos.Count == 0)
             {
-                MostrarStatus("⚠️ Nenhum aluno cadastrado nesta turma.", erro: true);
+                MostrarStatus("Nenhum aluno cadastrado nesta turma.", erro: true);
                 yield break;
             }
 
@@ -289,19 +286,19 @@ public class IdentificacaoController : MonoBehaviour
     }
 
     // =========================================================================
-    // BotaoRetry — chamado pelo botão de retry
+    // BotaoRetry
     // =========================================================================
 
     public void BotaoRetry()
     {
         botaoRetry.SetActive(false);
-        dropdownEscola.ClearOptions();
+        dropdownInstituicao.ClearOptions();
         dropdownTurma.ClearOptions();
         dropdownAluno.ClearOptions();
         dropdownTurma.interactable = false;
         dropdownAluno.interactable = false;
         botaoJogar.GetComponent<UnityEngine.UI.Button>().interactable = false;
-        StartCoroutine(BuscarEscolas());
+        StartCoroutine(BuscarInstituicoes());
     }
 
     // =========================================================================
@@ -332,11 +329,11 @@ public class IdentificacaoController : MonoBehaviour
     // Classes para deserialização do JSON
     // =========================================================================
 
-    [Serializable] private class Escola { public string _id; public string name; }
+    [Serializable] private class Instituicao { public string _id; public string name; }
     [Serializable] private class Turma { public string _id; public string name; }
     [Serializable] private class Aluno { public string _id; public string name; }
 
-    [Serializable] private class EscolasResponse { public List<Escola> escolas; }
+    [Serializable] private class InstituicoesResponse { public List<Instituicao> escolas; }
     [Serializable] private class TurmasResponse { public List<Turma> turmas; }
     [Serializable] private class AlunosResponse { public List<Aluno> alunos; }
 }
