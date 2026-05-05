@@ -42,5 +42,47 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
+    // =========================================================================
+    // VoltarIdentificacao
+    // Chamado pelo botão "Trocar Aluno" nas cenas Menu e SelectLevel.
+    // Encerra a sessão ativa (se houver), preserva configurações do dispositivo
+    // (volume e tema), limpa os dados do aluno anterior e volta à identificação.
+    // =========================================================================
 
+    public void VoltarIdentificacao()
+    {
+        // Encerra sessão ativa antes de sair, se houver
+        if (LudusSDK.LudusMonitor.Instance != null &&
+            LudusSDK.LudusMonitor.Instance.CurrentSession != null)
+        {
+            LudusSDK.LudusGameEvents.SessionEnded();
+            Debug.Log("[LUDUS] Sessão encerrada por troca de aluno.");
+        }
+
+        // Preserva configurações do dispositivo antes de limpar
+        float master = PlayerPrefs.GetFloat("Master", 0.5f);
+        float music = PlayerPrefs.GetFloat("Music", 0.5f);
+        int tema = PlayerPrefs.GetInt("theme", 0);
+
+        // Limpa todos os dados salvos do aluno anterior
+        PlayerPrefs.DeleteAll();
+
+        // Restaura configurações do dispositivo
+        PlayerPrefs.SetFloat("Master", master);
+        PlayerPrefs.SetFloat("Music", music);
+        PlayerPrefs.SetInt("theme", tema);
+        PlayerPrefs.Save();
+
+        // Reseta o feedback em memória de todas as categorias
+        // As variáveis são estáticas e não são afetadas pelo PlayerPrefs.DeleteAll()
+        GameManagerAcao.resultadoAvaliacao = "";
+        GameManagerAlimento.resultadoAvaliacao = "";
+        GameManagerCotidiano.resultadoAvaliacao = "";
+        GameManagerDiversao.resultadoAvaliacao = "";
+        GameManagerHigiene.resultadoAvaliacao = "";
+
+        Debug.Log("[LUDUS] Dados do aluno anterior limpos. Pronto para novo aluno.");
+
+        SceneManager.LoadScene(0); // Cena 0 = Identificacao
+    }
 }

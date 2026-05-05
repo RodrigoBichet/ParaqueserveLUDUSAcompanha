@@ -11,14 +11,12 @@ public class SoundControl : MonoBehaviour
 
     void Start()
     {
-        // Verifica se é a primeira vez que o jogo está sendo iniciado
-        if (PlayerPrefs.GetFloat("Master") == 0f)
+        // Usa HasKey para detectar primeira vez, em vez de comparar com 0
+        if (!PlayerPrefs.HasKey("Master"))
         {
-            // Configura os valores padrão para o volume Master e Music
             volumeMaster = 0.5f;
             volumeMusic = 0.5f;
 
-            // Atualiza os sliders e PlayerPrefs
             sliderMaster.value = volumeMaster;
             sliderMusic.value = volumeMusic;
             PlayerPrefs.SetFloat("Master", volumeMaster);
@@ -26,9 +24,15 @@ public class SoundControl : MonoBehaviour
         }
         else
         {
-            // Se não for a primeira vez, carrega os valores salvos
             sliderMaster.value = PlayerPrefs.GetFloat("Master");
             sliderMusic.value = PlayerPrefs.GetFloat("Music");
+
+            // Aplica o volume de fato, nao so visualmente
+            AudioListener.volume = sliderMaster.value;
+
+            GameObject[] musicas = GameObject.FindGameObjectsWithTag("musica");
+            foreach (var m in musicas)
+                m.GetComponent<AudioSource>().volume = sliderMusic.value;
         }
     }
 
