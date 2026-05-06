@@ -41,6 +41,9 @@ public class IdentificacaoController : MonoBehaviour
     private List<string> _alunoIds = new List<string>();
     private List<string> _alunoNomes = new List<string>();
 
+    private List<bool> _alunoCapturaSolicitada = new List<bool>();
+
+
     // =========================================================================
     // Unity — Start
     // =========================================================================
@@ -253,17 +256,23 @@ public class IdentificacaoController : MonoBehaviour
             dropdownAluno.ClearOptions();
             _alunoIds.Clear();
             _alunoNomes.Clear();
+            _alunoCapturaSolicitada.Clear();
+
 
             var opcoes = new List<string>();
             opcoes.Add("Selecione o aluno...");
             _alunoIds.Add("");
             _alunoNomes.Add("");
+            _alunoCapturaSolicitada.Add(false);
+
 
             foreach (var aluno in resposta.alunos)
             {
                 opcoes.Add(aluno.name);
                 _alunoIds.Add(aluno._id);
                 _alunoNomes.Add(aluno.name);
+                _alunoCapturaSolicitada.Add(aluno.capturaSolicitada);
+
             }
 
             dropdownAluno.AddOptions(opcoes);
@@ -309,16 +318,21 @@ public class IdentificacaoController : MonoBehaviour
     {
         int indexAluno = dropdownAluno.value;
 
-        if (indexAluno == 0 || indexAluno >= _alunoNomes.Count)
+        if (indexAluno == 0 ||
+    indexAluno >= _alunoNomes.Count ||
+    indexAluno >= _alunoCapturaSolicitada.Count)
         {
             Debug.LogWarning("[LUDUS] Nenhum aluno selecionado.");
             return;
         }
 
+
         string nomeAluno = _alunoNomes[indexAluno];
+        bool capturaSolicitada = _alunoCapturaSolicitada[indexAluno];
+
 
         if (LudusSDK.LudusMonitor.Instance != null)
-            LudusSDK.LudusGameEvents.DefinirJogador(nomeAluno);
+            LudusSDK.LudusGameEvents.DefinirJogador(nomeAluno, capturaSolicitada);
         else
             Debug.LogWarning("[LUDUS] LudusMonitor não encontrado.");
 
@@ -331,7 +345,7 @@ public class IdentificacaoController : MonoBehaviour
 
     [Serializable] private class Instituicao { public string _id; public string name; }
     [Serializable] private class Turma { public string _id; public string name; }
-    [Serializable] private class Aluno { public string _id; public string name; }
+    [Serializable] private class Aluno { public string _id; public string name; public bool capturaSolicitada; }
 
     [Serializable] private class InstituicoesResponse { public List<Instituicao> escolas; }
     [Serializable] private class TurmasResponse { public List<Turma> turmas; }

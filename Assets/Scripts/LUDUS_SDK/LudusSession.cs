@@ -43,6 +43,9 @@ namespace LudusSDK
         public List<LudusPathPoint> mousePath;
         public List<LudusGameEvent> gameEvents;
 
+        public List<LudusFaseScreenshot> screenshots;
+
+
         // -------------------------------------------------------------------------
         // Construtor — inicializa a sessão com os dados básicos
         // -------------------------------------------------------------------------
@@ -65,6 +68,9 @@ namespace LudusSDK
             this.clicks = new List<LudusClickEvent>();
             this.mousePath = new List<LudusPathPoint>();
             this.gameEvents = new List<LudusGameEvent>();
+
+            this.screenshots = new List<LudusFaseScreenshot>();
+
         }
     }
 
@@ -157,4 +163,25 @@ namespace LudusSDK
             this.payload = payload;
         }
     }
+
+    // -------------------------------------------------------------------------
+    // Screenshot capturado no início de uma fase
+    // Usado pelo dashboard para exibir a imagem por trás do mapa de calor
+    // -------------------------------------------------------------------------
+
+    [Serializable]
+    public class LudusFaseScreenshot
+    {
+        public int faseIndex;
+        public long timestamp;
+        public string screenshotBase64;
+
+        public LudusFaseScreenshot(int faseIndex, long timestamp, string screenshotBase64)
+        {
+            this.faseIndex = faseIndex;
+            this.timestamp = timestamp;
+            this.screenshotBase64 = screenshotBase64;
+        }
+    }
+
 }

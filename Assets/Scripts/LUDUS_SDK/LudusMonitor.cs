@@ -10,7 +10,10 @@
 // =============================================================================
 
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 namespace LudusSDK
 {
@@ -44,12 +47,23 @@ namespace LudusSDK
         // Guarda o jogador atual entre sessões
         private string _currentPlayerId;
 
+        private bool _capturaSolicitada;
+        private int _faseScreenshotIndex;
+
+        private bool _rastreamentoBloqueado;
+
+
+
         // -------------------------------------------------------------------------
         // Propriedade pública para leitura da sessão (somente leitura)
         // -------------------------------------------------------------------------
 
         public LudusSession CurrentSession => _currentSession;
         public LudusConfig Config => _config;
+
+        public bool CapturaSolicitada => _capturaSolicitada;
+
+        public bool RastreamentoBloqueado => _rastreamentoBloqueado;
 
         // =========================================================================
         // Unity — Awake
@@ -131,6 +145,8 @@ namespace LudusSDK
             _lastActionTime = Time.time;
             _inactivityDispatched = false;
             _sessionActive = true;
+            _faseScreenshotIndex = 0;
+
 
             if (_config.debugMode)
                 Debug.Log("[LUDUS] Sessão iniciada. Player: " + playerId +
@@ -142,12 +158,17 @@ namespace LudusSDK
         // Apenas guarda o playerId sem iniciar sessão.
         // A sessão só é criada quando o jogador seleciona uma categoria.
         // =========================================================================
-        public void DefinirJogador(string playerId)
+        public void DefinirJogador(string playerId, bool capturaSolicitada = false)
         {
             _currentPlayerId = playerId;
+            _capturaSolicitada = capturaSolicitada;
+
+
 
             if (_config.debugMode)
-                Debug.Log("[LUDUS] Jogador definido (sem sessão iniciada): " + playerId);
+                Debug.Log("[LUDUS] Jogador definido (sem sessão iniciada): " + playerId +
+                          " | Captura solicitada: " + capturaSolicitada);
+
         }
 
         // =========================================================================
@@ -305,6 +326,80 @@ namespace LudusSDK
                                     tempoSemAcao.ToString("F1") + "s");
             }
         }
+
+
+        // =========================================================================
+        // CapturarScreenshotFase
+        // Captura a tela atual quando a captura foi solicitada para o aluno.
+        // A imagem é guardada em base64 dentro da sessão e enviada no JSON final.
+        // =========================================================================
+
+        public void CapturarScreenshotFase()
+        {
+            if (!_sessionActive) return;
+            if (!_capturaSolicitada) return;
+            if (_currentSession == null) return;
+
+            // A primeira fase de cada categoria tem animação de entrada.
+            // Nas demais fases, capturamos sem atraso para evitar pegar interação em andamento.
+            float atraso = _faseScreenshotIndex == 0 ? 1.2f : 0f;
+
+            StartCoroutine(CapturarScreenshotFaseCoroutine(atraso));
+        }
+
+
+        private IEnumerator CapturarScreenshotFaseCoroutine(float atraso)
+        {
+            EventSystem eventSystem = EventSystem.current;
+            bool eventSystemEstavaAtivo = eventSystem != null && eventSystem.enabled;
+
+            _rastreamentoBloqueado = true;
+
+            if (eventSystem != null)
+                eventSystem.enabled = false;
+
+            if (atraso > 0f)
+                yield return new WaitForSeconds(atraso);
+
+            // Aguarda o final do frame para capturar a tela já renderizada
+            yield return new WaitForEndOfFrame();
+
+            Texture2D screenshot = ScreenCapture.CaptureScreenshotAsTexture();
+
+            if (eventSystem != null)
+                eventSystem.enabled = eventSystemEstavaAtivo;
+
+            _rastreamentoBloqueado = false;
+
+            if (screenshot == null)
+            {
+                Debug.LogWarning("[LUDUS] Não foi possível capturar screenshot da fase.");
+                yield break;
+            }
+
+
+            byte[] bytes = screenshot.EncodeToJPG(70);
+            string base64 = Convert.ToBase64String(bytes);
+
+            UnityEngine.Object.Destroy(screenshot);
+
+            long timestampMs = GetTimestampAtual();
+
+            _currentSession.screenshots.Add(
+                new LudusFaseScreenshot(
+                    _faseScreenshotIndex,
+                    timestampMs,
+                    base64
+                )
+            );
+
+            if (_config.debugMode)
+                Debug.Log("[LUDUS] Screenshot capturado para fase " + _faseScreenshotIndex);
+
+            _faseScreenshotIndex++;
+        }
+
+
 
         // =========================================================================
         // GetTimestampAtual

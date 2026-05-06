@@ -66,6 +66,7 @@ namespace LudusSDK
             // Só rastreia se houver sessão ativa
             if (LudusMonitor.Instance == null) return;
             if (LudusMonitor.Instance.CurrentSession == null) return;
+            if (LudusMonitor.Instance.RastreamentoBloqueado) return;
 
             VerificarClique();
             RegistrarCaminho();
