@@ -1,7 +1,26 @@
-# Changelog — Para Que Serve? + LUDUS Monitor SDK
+﻿# Changelog — Para Que Serve? + LUDUS Monitor SDK
 
 Todas as mudanças relevantes do projeto são registradas aqui.  
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
+
+---
+
+## [1.0.0] — 2026-05-06 — Captura de imagens por fase para heatmap
+
+### Adicionado
+
+- `IdentificacaoController.cs` — leitura do campo `capturaSolicitada` recebido do backend junto com os alunos
+- `LudusGameEvents.cs` — `DefinirJogador(playerId, capturaSolicitada)` repassa a solicitação ao SDK
+- `LudusSession.cs` — lista `screenshots` e classe `LudusFaseScreenshot` no JSON da sessão
+- `LudusMonitor.cs` — captura screenshot em base64 no início de cada fase quando solicitado pelo dashboard
+- `LudusMonitor.cs` — atraso apenas na primeira fase da categoria para aguardar animação inicial antes do print
+- `LudusMonitor.cs` — bloqueio temporário de interação durante a captura inicial
+- `LudusInputTracker.cs` — pausa o rastreamento de cliques/caminho enquanto a captura inicial está bloqueando interação
+
+### Comportamento
+
+- A captura é sob demanda e vale para a próxima sessão enviada pelo jogo.
+- O índice de screenshots reinicia a cada sessão/categoria, gerando fases `0`, `1`, `2` e `3` no JSON.
 
 ---
 
@@ -120,5 +139,5 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ## Próximas versões planejadas
 
-- `[1.0.0]` — Publicar backend em servidor real e atualizar `backendUrl`
-- `[1.1.0]` — Jogo testado nas escolas parceiras com dados reais
+- `[1.1.0]` — Publicar backend em servidor real e atualizar `backendUrl`
+- `[1.2.0]` — Jogo testado nas escolas parceiras com dados reais

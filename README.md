@@ -1,4 +1,4 @@
-# Para Que Serve? — LUDUS Monitor SDK
+﻿# Para Que Serve? — LUDUS Monitor SDK
 
 > Parte do projeto **LUDUS Acompanha** — Mestrado em Ciência da Computação, UFPel (2026)  
 > Autor: Rodrigo Leitzke Bichet  
@@ -105,11 +105,13 @@ LudusExporter verifica e reenvia sessões pendentes
     ↓
 Professor seleciona Escola → Turma → Aluno
     ↓
-LudusGameEvents.DefinirJogador("nome do aluno")   ← apenas registra, sem iniciar sessão
+LudusGameEvents.DefinirJogador("nome do aluno", capturaSolicitada)   ← registra aluno e solicitação de imagens
     ↓
 Criança seleciona categoria
     ↓
 LudusGameEvents.NovaSessaoCategoria("Ações")      ← inicia sessão + registra categoria
+    ↓
+Se houver captura solicitada → SDK salva imagens por fase para o heatmap
     ↓
 Criança joga — LudusGameEvents registra cada ação
     ↓
@@ -130,11 +132,18 @@ Professor clica "Trocar Aluno" → VoltarIdentificacao() → sessão encerrada +
 
 ---
 
+## Captura de imagens para heatmap
+
+Quando o professor ativa **Imagens no mapa de calor** no dashboard, a tela de identificação recebe o campo `capturaSolicitada` junto com os dados do aluno. O SDK guarda essa informação e, na próxima sessão/categoria, captura uma imagem de cada uma das quatro fases.
+
+Na primeira fase da categoria, o SDK aguarda a animação inicial terminar antes do print. Durante esse pequeno intervalo, a interação e o rastreamento bruto ficam bloqueados para evitar imagens com item sendo arrastado ou dados de heatmap contaminados. Nas fases seguintes, a captura acontece imediatamente no início da fase.
+
+As imagens são enviadas em base64 dentro do JSON da sessão. O backend salva os arquivos em `backend/uploads/screenshots/` e desativa automaticamente a solicitação após receber a sessão.
 ## Eventos semânticos implementados
 
 | Evento                                        | Quando dispara                      |
 | --------------------------------------------- | ----------------------------------- |
-| `DefinirJogador(playerId)`                    | Aluno selecionado na identificação  |
+| `DefinirJogador(playerId, capturaSolicitada)` | Aluno selecionado na identificação  |
 | `NovaSessaoCategoria(category)`               | Criança escolhe categoria           |
 | `PhaseStarted(target, options[])`             | Novo Canvas de fase ativado         |
 | `DragAttempt(item, target, correct)`          | Criança arrasta item                |
@@ -175,6 +184,7 @@ Professor clica "Trocar Aluno" → VoltarIdentificacao() → sessão encerrada +
 | Sessão independente por categoria jogada              | ✅     |
 | Troca de aluno com reset de dados e sessão            | ✅     |
 | Volume persistente corrigido entre alunos             | ✅     |
+| Captura sob demanda de imagens para mapa de calor      | ✅     |
 
 ---
 
