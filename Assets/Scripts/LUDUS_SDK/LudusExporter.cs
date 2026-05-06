@@ -78,7 +78,9 @@ namespace LudusSDK
                 Debug.Log("[LUDUS] Exporter: JSON gerado (" + json.Length + " caracteres).");
 
             // Inicia o envio como Coroutine (necessário para chamadas HTTP no Unity)
-            StartCoroutine(EnviarParaBackend(json, sessao.sessionId));
+            bool sessaoTemScreenshots = sessao.screenshots != null && sessao.screenshots.Count > 0;
+            StartCoroutine(EnviarParaBackend(json, sessao.sessionId, sessaoTemScreenshots));
+
         }
 
         // =========================================================================
@@ -86,7 +88,7 @@ namespace LudusSDK
         // Coroutine que faz o HTTP POST para o backend Node.js
         // =========================================================================
 
-        private IEnumerator EnviarParaBackend(string json, string sessionId)
+        private IEnumerator EnviarParaBackend(string json, string sessionId, bool sessaoTemScreenshots)
         {
             LudusConfig config = LudusMonitor.Instance.Config;
             string url = config.backendUrl + "/api/sessions";
@@ -114,10 +116,24 @@ namespace LudusSDK
                         Debug.Log("[LUDUS] Exporter: sessão enviada com sucesso! " +
                                   "Resposta: " + requisicao.downloadHandler.text);
 
+                    if (sessaoTemScreenshots && LudusMonitor.Instance != null)
+                    {
+                        LudusMonitor.Instance.DefinirCapturaSolicitada(false);
+                        PlayerPrefs.SetString("LUDUSCapturaOrigem", "");
+                        PlayerPrefs.Save();
+
+                        if (config.debugMode)
+                        {
+                            Debug.Log("[LUDUS] Captura local desativada após envio da sessão com imagens.");
+                        }
+                    }
+
                     // Se havia um arquivo de fallback desta sessão, remove
                     if (config.enableLocalFallback)
                         RemoverArquivoFallback(sessionId, config);
                 }
+
+
                 // --- Falha ---
                 else
                 {

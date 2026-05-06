@@ -172,6 +172,21 @@ namespace LudusSDK
         }
 
         // =========================================================================
+        // DefinirCapturaSolicitada
+        // Permite ativar ou desativar a captura após o jogador já estar definido.
+        // =========================================================================
+        public void DefinirCapturaSolicitada(bool capturaSolicitada)
+        {
+            _capturaSolicitada = capturaSolicitada;
+
+            if (_config.debugMode)
+            {
+                Debug.Log("[LUDUS] Captura solicitada atualizada: " + capturaSolicitada);
+            }
+        }
+
+
+        // =========================================================================
         // ReiniciarSessao
         // Inicia uma nova sessão para o mesmo jogador da sessão anterior.
         // Chamado ao selecionar uma nova categoria sem passar pela identificação.

@@ -43,6 +43,9 @@ public class IdentificacaoController : MonoBehaviour
 
     private List<bool> _alunoCapturaSolicitada = new List<bool>();
 
+    private List<string> _alunoCapturaOrigem = new List<string>();
+
+
 
     // =========================================================================
     // Unity — Start
@@ -257,6 +260,7 @@ public class IdentificacaoController : MonoBehaviour
             _alunoIds.Clear();
             _alunoNomes.Clear();
             _alunoCapturaSolicitada.Clear();
+            _alunoCapturaOrigem.Clear();
 
 
             var opcoes = new List<string>();
@@ -264,6 +268,7 @@ public class IdentificacaoController : MonoBehaviour
             _alunoIds.Add("");
             _alunoNomes.Add("");
             _alunoCapturaSolicitada.Add(false);
+            _alunoCapturaOrigem.Add("");
 
 
             foreach (var aluno in resposta.alunos)
@@ -272,6 +277,7 @@ public class IdentificacaoController : MonoBehaviour
                 _alunoIds.Add(aluno._id);
                 _alunoNomes.Add(aluno.name);
                 _alunoCapturaSolicitada.Add(aluno.capturaSolicitada);
+                _alunoCapturaOrigem.Add(aluno.capturaSolicitadaOrigem ?? "");
 
             }
 
@@ -318,17 +324,27 @@ public class IdentificacaoController : MonoBehaviour
     {
         int indexAluno = dropdownAluno.value;
 
-        if (indexAluno == 0 ||
-    indexAluno >= _alunoNomes.Count ||
-    indexAluno >= _alunoCapturaSolicitada.Count)
+        if (
+     indexAluno == 0 ||
+     indexAluno >= _alunoIds.Count ||
+     indexAluno >= _alunoNomes.Count ||
+     indexAluno >= _alunoCapturaSolicitada.Count ||
+     indexAluno >= _alunoCapturaOrigem.Count
+ )
         {
             Debug.LogWarning("[LUDUS] Nenhum aluno selecionado.");
             return;
         }
 
 
+
         string nomeAluno = _alunoNomes[indexAluno];
         bool capturaSolicitada = _alunoCapturaSolicitada[indexAluno];
+
+        PlayerPrefs.SetString("LUDUSAlunoId", _alunoIds[indexAluno]);
+        PlayerPrefs.SetString("LUDUSCapturaOrigem", _alunoCapturaOrigem[indexAluno]);
+        PlayerPrefs.Save();
+
 
 
         if (LudusSDK.LudusMonitor.Instance != null)
@@ -345,7 +361,15 @@ public class IdentificacaoController : MonoBehaviour
 
     [Serializable] private class Instituicao { public string _id; public string name; }
     [Serializable] private class Turma { public string _id; public string name; }
-    [Serializable] private class Aluno { public string _id; public string name; public bool capturaSolicitada; }
+    [Serializable]
+    private class Aluno
+    {
+        public string _id;
+        public string name;
+        public bool capturaSolicitada;
+        public string capturaSolicitadaOrigem;
+    }
+
 
     [Serializable] private class InstituicoesResponse { public List<Instituicao> escolas; }
     [Serializable] private class TurmasResponse { public List<Turma> turmas; }
