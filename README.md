@@ -37,6 +37,7 @@ Assets/
 │   │   └── LudusExporter.cs      ← Serialização e envio HTTP
 │   └── (scripts do jogo)
 │       ├── IdentificacaoController.cs  ← Seleção de aluno em cascata
+│       ├── LudusCapturaToggle.cs       ← Interruptor de imagens para mapa de calor
 │       ├── Menu.cs                     ← Navegação, NovaSessaoCategoria e VoltarIdentificacao
 │       ├── SceneControl.cs             ← PhaseStarted + PhaseCompleted
 │       ├── ItemColado.cs               ← CorrectMatch + WrongMatch
@@ -107,6 +108,8 @@ Professor seleciona Escola → Turma → Aluno
     ↓
 LudusGameEvents.DefinirJogador("nome do aluno", capturaSolicitada)   ← registra aluno e solicitação de imagens
     ↓
+Professor pode ligar/desligar "Imagem no mapa" no painel de configurações
+    ↓
 Criança seleciona categoria
     ↓
 LudusGameEvents.NovaSessaoCategoria("Ações")      ← inicia sessão + registra categoria
@@ -134,11 +137,14 @@ Professor clica "Trocar Aluno" → VoltarIdentificacao() → sessão encerrada +
 
 ## Captura de imagens para heatmap
 
-Quando o professor ativa **Imagens no mapa de calor** no dashboard, a tela de identificação recebe o campo `capturaSolicitada` junto com os dados do aluno. O SDK guarda essa informação e, na próxima sessão/categoria, captura uma imagem de cada uma das quatro fases.
+A captura pode ser ativada pelo dashboard ou pelo interruptor **Imagem no mapa** dentro do jogo. A tela de identificação recebe `capturaSolicitada` e `capturaSolicitadaOrigem` junto com os dados do aluno, permitindo que o jogo respeite solicitações já feitas pelo dashboard.
+
+Quando a captura está ativa, a próxima sessão/categoria salva uma imagem de cada uma das quatro fases. Se a solicitação veio do dashboard, o interruptor aparece ligado e bloqueado no jogo. Se a solicitação veio da Unity, o dashboard exibe aviso e bloqueia alteração até a sessão ser registrada ou o interruptor ser desligado.
 
 Na primeira fase da categoria, o SDK aguarda a animação inicial terminar antes do print. Durante esse pequeno intervalo, a interação e o rastreamento bruto ficam bloqueados para evitar imagens com item sendo arrastado ou dados de heatmap contaminados. Nas fases seguintes, a captura acontece imediatamente no início da fase.
 
-As imagens são enviadas em base64 dentro do JSON da sessão. O backend salva os arquivos em `backend/uploads/screenshots/` e desativa automaticamente a solicitação após receber a sessão.
+As imagens são enviadas em base64 dentro do JSON da sessão. Após envio bem-sucedido de uma sessão com imagens, o SDK desativa a captura localmente e limpa a origem salva no dispositivo. O backend salva os arquivos em `backend/uploads/screenshots/` e também desativa automaticamente a solicitação do aluno.
+
 ## Eventos semânticos implementados
 
 | Evento                                        | Quando dispara                      |
@@ -185,6 +191,8 @@ As imagens são enviadas em base64 dentro do JSON da sessão. O backend salva os
 | Troca de aluno com reset de dados e sessão            | ✅     |
 | Volume persistente corrigido entre alunos             | ✅     |
 | Captura sob demanda de imagens para mapa de calor      | ✅     |
+| Interruptor visual para imagem no mapa de calor        | ✅     |
+| Bloqueio por origem entre dashboard e Unity            | ✅     |
 
 ---
 

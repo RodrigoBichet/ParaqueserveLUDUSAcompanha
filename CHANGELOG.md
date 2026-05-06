@@ -5,6 +5,30 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [1.1.0] — 2026-05-06 — Interruptor de imagens para heatmap
+
+### Adicionado
+
+- `LudusCapturaToggle.cs` — interruptor visual para ligar/desligar imagens no mapa de calor pelo jogo
+- `IdentificacaoController.cs` — salvamento de `LUDUSAlunoId` e origem da captura em `PlayerPrefs`
+- `LudusMonitor.cs` — método `DefinirCapturaSolicitada()` para atualizar a captura após o aluno já estar definido
+- Cenas `Menu` e `Selectlevel` — elementos visuais do interruptor e feedback para o professor
+
+### Alterado
+
+- `LudusExporter.cs` — desativa a captura local após envio bem-sucedido de uma sessão com imagens
+- `LudusCapturaToggle.cs` — respeita solicitações feitas pelo dashboard e bloqueia alteração quando necessário
+- `IdentificacaoController.cs` — leitura de `capturaSolicitadaOrigem` recebida pelo backend
+
+### Comportamento
+
+- A captura de imagens vale para a próxima sessão/categoria.
+- Se o dashboard ativou a captura, o interruptor no jogo aparece ligado e bloqueado.
+- Se a Unity ativou a captura, o dashboard exibe aviso e não sobrescreve a solicitação.
+- Após a sessão com imagens ser enviada, o jogo desliga a captura local automaticamente.
+
+---
+
 ## [1.0.0] — 2026-05-06 — Captura de imagens por fase para heatmap
 
 ### Adicionado
