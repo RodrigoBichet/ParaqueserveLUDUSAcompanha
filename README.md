@@ -38,13 +38,18 @@ Assets/
 │   └── (scripts do jogo)
 │       ├── IdentificacaoController.cs  ← Seleção de aluno em cascata
 │       ├── LudusCapturaToggle.cs       ← Interruptor de imagens para mapa de calor
+│       ├── ButtonTutorial.cs           ← Tutorial em vídeo com controles WebGL
+│       ├── DragDrop.cs                 ← Arraste dos itens + registro de dragPath
 │       ├── Menu.cs                     ← Navegação, NovaSessaoCategoria e VoltarIdentificacao
 │       ├── SceneControl.cs             ← PhaseStarted + PhaseCompleted
 │       ├── ItemColado.cs               ← CorrectMatch + WrongMatch
 │       └── SoundControl.cs             ← Controle de volume persistente
-└── Resources/
-    └── LUDUS_SDK/
-        └── LudusConfig.asset     ← Asset de configuração
+├── Resources/
+│   └── LUDUS_SDK/
+│       └── LudusConfig.asset     ← Asset de configuração
+└── StreamingAssets/
+    └── Videos/
+        └── LEGENDATUTORIALPARAQUESERVE.mp4
 ```
 
 ---
@@ -120,6 +125,8 @@ Criança joga — LudusGameEvents registra cada ação
     ↓
 LudusInputTracker registra cliques e caminho automaticamente
     ↓
+DragDrop registra inicio, movimento e fim do arraste dos itens
+    ↓
 Criança completa os 4 Canvas → PhaseCompleted
     ↓
 Professor clica em avançar no feedback → SessionEnded()
@@ -144,6 +151,43 @@ Quando a captura está ativa, a próxima sessão/categoria salva uma imagem de c
 Na primeira fase da categoria, o SDK aguarda a animação inicial terminar antes do print. Durante esse pequeno intervalo, a interação e o rastreamento bruto ficam bloqueados para evitar imagens com item sendo arrastado ou dados de heatmap contaminados. Nas fases seguintes, a captura acontece imediatamente no início da fase.
 
 As imagens são enviadas em base64 dentro do JSON da sessão. Após envio bem-sucedido de uma sessão com imagens, o SDK desativa a captura localmente e limpa a origem salva no dispositivo. O backend salva os arquivos em `backend/uploads/screenshots/` e também desativa automaticamente a solicitação do aluno.
+
+## Tutorial em video no WebGL
+
+O tutorial do jogo usa `VideoPlayer` com arquivo carregado por URL a partir de `StreamingAssets/Videos/`, garantindo compatibilidade com o build WebGL. Os videos devem estar em formato `.mp4` com H.264 Baseline, AAC e `faststart`, evitando tela preta ou problemas de timestamp no navegador.
+
+A cena `Tutorial` possui controles próprios para o video:
+
+- Play inicial
+- Pausar/continuar
+- Avançar alguns segundos
+- Retroceder alguns segundos
+- Barra de progresso com arraste manual
+- Tempo atual e tempo total do video
+
+No Editor, o mesmo fluxo usa o caminho local de `StreamingAssets`. No WebGL, o caminho passa a ser servido como URL pelo build do Unity.
+
+---
+
+## Registro de arraste para mapa de interações
+
+Além dos cliques e do caminho do mouse, o jogo registra agora o trajeto de arraste dos itens por meio de `DragDrop.cs` e `LudusMonitor.RegistrarPontoArraste()`.
+
+Cada ponto de arraste enviado na sessão contém:
+
+| Campo     | Descrição                                           |
+| --------- | --------------------------------------------------- |
+| `element` | Nome do item arrastado                              |
+| `x`       | Posição X do ponteiro                               |
+| `y`       | Posição Y do ponteiro                               |
+| `t`       | Timestamp em milissegundos desde o início da sessão |
+| `state`   | Estado do arraste: `start`, `move` ou `end`         |
+
+Para reduzir volume de dados, os pontos intermediários (`move`) são registrados com intervalo mínimo de aproximadamente `0.05s`. Os pontos `start` e `end` são sempre registrados.
+
+Esses dados são enviados no campo `dragPath[]` do JSON da sessão. No dashboard LUDUS Acompanha, eles aparecem como linhas tracejadas no mapa de interações, permitindo observar quando a criança segurou e movimentou um item.
+
+---
 
 ## Eventos semânticos implementados
 
@@ -190,9 +234,9 @@ As imagens são enviadas em base64 dentro do JSON da sessão. Após envio bem-su
 | Sessão independente por categoria jogada              | ✅     |
 | Troca de aluno com reset de dados e sessão            | ✅     |
 | Volume persistente corrigido entre alunos             | ✅     |
-| Captura sob demanda de imagens para mapa de calor      | ✅     |
-| Interruptor visual para imagem no mapa de calor        | ✅     |
-| Bloqueio por origem entre dashboard e Unity            | ✅     |
+| Captura sob demanda de imagens para mapa de calor     | ✅     |
+| Interruptor visual para imagem no mapa de calor       | ✅     |
+| Bloqueio por origem entre dashboard e Unity           | ✅     |
 
 ---
 

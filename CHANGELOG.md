@@ -5,6 +5,33 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ---
 
+## [1.2.0] — 2026-05-11 — Tutorial WebGL e registro de arraste
+
+### Adicionado
+
+- `ButtonTutorial.cs` — carregamento do video do tutorial por URL a partir de `StreamingAssets`
+- `ButtonTutorial.cs` — controles de midia para pausar/continuar, avançar, retroceder e arrastar a barra de progresso
+- Cena `Tutorial` — textos de tempo atual e tempo total do video
+- `StreamingAssets/Videos/` — videos do tutorial preparados para uso no build WebGL
+- `LudusSession.cs` — lista `dragPath` e classe `LudusDragPathPoint` no JSON da sessao
+- `LudusMonitor.cs` — metodo `RegistrarPontoArraste()` para armazenar pontos de arraste durante a sessao
+- `DragDrop.cs` — registro de inicio, movimento e fim do arraste dos itens
+
+### Alterado
+
+- Videos do tutorial foram reencodados para `.mp4` com H.264 Baseline, AAC e `faststart`, melhorando compatibilidade no WebGL
+- `ButtonTutorial.cs` passou a atualizar slider e tempo do video em tempo real, inclusive apos avanço, retrocesso e arraste manual
+- `DragDrop.cs` limita a frequencia de pontos intermediarios do arraste para reduzir volume de dados enviados
+
+### Comportamento
+
+- O tutorial deixa de depender de `VideoClip` direto para WebGL e passa a usar o caminho de `StreamingAssets`.
+- O professor/aluno consegue controlar o video do tutorial com botoes e barra de progresso.
+- O jogo envia `dragPath[]` junto com a sessao, permitindo que o dashboard diferencie movimento livre do mouse e arraste/segurar item.
+- Os pontos `start` e `end` do arraste sao sempre registrados; pontos `move` sao amostrados em intervalos curtos para evitar excesso de dados.
+
+---
+
 ## [1.1.0] — 2026-05-06 — Interruptor de imagens para heatmap
 
 ### Adicionado
