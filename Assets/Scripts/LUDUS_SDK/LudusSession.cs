@@ -41,6 +41,8 @@ namespace LudusSDK
         // Listas de eventos detalhados
         public List<LudusClickEvent> clicks;
         public List<LudusPathPoint> mousePath;
+
+        public List<LudusDragPathPoint> dragPath;
         public List<LudusGameEvent> gameEvents;
 
         public List<LudusFaseScreenshot> screenshots;
@@ -67,6 +69,7 @@ namespace LudusSDK
             // Inicializa as listas vazias
             this.clicks = new List<LudusClickEvent>();
             this.mousePath = new List<LudusPathPoint>();
+            this.dragPath = new List<LudusDragPathPoint>();
             this.gameEvents = new List<LudusGameEvent>();
 
             this.screenshots = new List<LudusFaseScreenshot>();
@@ -143,6 +146,26 @@ namespace LudusSDK
             this.t = t;
         }
     }
+
+    [Serializable]
+    public class LudusDragPathPoint
+    {
+        public string element;
+        public float x;
+        public float y;
+        public long t;
+        public string state;
+
+        public LudusDragPathPoint(string element, float x, float y, long t, string state)
+        {
+            this.element = element;
+            this.x = x;
+            this.y = y;
+            this.t = t;
+            this.state = state;
+        }
+    }
+
 
     // -------------------------------------------------------------------------
     // Evento semântico do jogo

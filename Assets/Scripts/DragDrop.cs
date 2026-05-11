@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using LudusSDK;
+
 
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
@@ -15,6 +17,10 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public Image imageComponent;
     private AudioSource sound;
     private string nomeItem;
+
+    private float ultimoRegistroArraste = 0f;
+    private const float INTERVALO_REGISTRO_ARRASTE = 0.05f;
+
 
     [SerializeField] private Canvas canvas;
     public TMP_Text legendaText;
@@ -49,6 +55,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             // Ativar e atualizar a legenda ao iniciar o arraste
             legendaText.gameObject.SetActive(true);
             AtualizarLegenda(nomeItem);
+            RegistrarArraste(eventData, "start", true);
+
         }
     }
 
@@ -59,6 +67,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             // Verificar se está arrastando antes de atualizar a posição
             rt.anchoredPosition += eventData.delta / canvas.scaleFactor;
             Debug.Log("Dragou");
+            RegistrarArraste(eventData, "move");
+
         }
     }
 
@@ -79,6 +89,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 
         // Desativar a legenda após 1 segundo
         Invoke("DesativarLegenda", 1f);
+        RegistrarArraste(eventData, "end", true);
+
     }
 
     private void DesativarLegenda()
@@ -103,4 +115,36 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
             Debug.LogError("Legenda não encontrada para o item: " + nomeItem);
         }
     }
+
+    private void RegistrarArraste(PointerEventData eventData, string estado, bool forcar = false)
+    {
+        if (LudusMonitor.Instance == null) return;
+
+        if (!forcar && Time.unscaledTime - ultimoRegistroArraste < INTERVALO_REGISTRO_ARRASTE)
+        {
+            return;
+        }
+
+        ultimoRegistroArraste = Time.unscaledTime;
+
+        string item = ObterNomeItem();
+
+        LudusMonitor.Instance.RegistrarPontoArraste(
+            item,
+            eventData.position.x,
+            eventData.position.y,
+            estado
+        );
+    }
+
+    private string ObterNomeItem()
+    {
+        if (imageComponent != null && imageComponent.sprite != null)
+        {
+            return imageComponent.sprite.name;
+        }
+
+        return gameObject.name;
+    }
+
 }

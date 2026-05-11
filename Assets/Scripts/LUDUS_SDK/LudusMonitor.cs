@@ -313,6 +313,21 @@ namespace LudusSDK
             _currentSession.mousePath.Add(new LudusPathPoint(x, y, timestampMs));
         }
 
+        public void RegistrarPontoArraste(string element, float x, float y, string state)
+        {
+            if (!_sessionActive) return;
+            if (_currentSession == null) return;
+
+            long timestampMs = (long)((Time.time - _sessionStartTime) * 1000f);
+
+            _currentSession.dragPath.Add(
+                new LudusDragPathPoint(element, x, y, timestampMs, state)
+            );
+
+            RegistrarAcao();
+        }
+
+
         // =========================================================================
         // VerificarInatividade
         // Roda todo frame — dispara evento se o threshold for atingido
