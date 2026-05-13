@@ -337,18 +337,20 @@ public class IdentificacaoController : MonoBehaviour
         }
 
 
-
+        string alunoId = _alunoIds[indexAluno];
         string nomeAluno = _alunoNomes[indexAluno];
         bool capturaSolicitada = _alunoCapturaSolicitada[indexAluno];
 
-        PlayerPrefs.SetString("LUDUSAlunoId", _alunoIds[indexAluno]);
+        PlayerPrefs.SetString("LUDUSAlunoId", alunoId);
         PlayerPrefs.SetString("LUDUSCapturaOrigem", _alunoCapturaOrigem[indexAluno]);
         PlayerPrefs.Save();
 
 
 
         if (LudusSDK.LudusMonitor.Instance != null)
-            LudusSDK.LudusGameEvents.DefinirJogador(nomeAluno, capturaSolicitada);
+            LudusSDK.LudusGameEvents.DefinirJogador(alunoId, nomeAluno, capturaSolicitada);
+
+
         else
             Debug.LogWarning("[LUDUS] LudusMonitor não encontrado.");
 

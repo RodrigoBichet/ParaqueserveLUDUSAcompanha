@@ -32,7 +32,7 @@ namespace LudusSDK
         // Chamado pela tela de identificação. A sessão só começa quando
         // uma categoria é selecionada via NovaSessaoCategoria().
         // =========================================================================
-        public static void DefinirJogador(string playerId, bool capturaSolicitada = false)
+        public static void DefinirJogador(string studentId, string playerId, bool capturaSolicitada = false)
 
         {
             if (LudusMonitor.Instance == null)
@@ -41,7 +41,7 @@ namespace LudusSDK
                 return;
             }
 
-            LudusMonitor.Instance.DefinirJogador(playerId, capturaSolicitada);
+            LudusMonitor.Instance.DefinirJogador(studentId, playerId, capturaSolicitada);
         }
 
         public static void CategorySelected(string category)

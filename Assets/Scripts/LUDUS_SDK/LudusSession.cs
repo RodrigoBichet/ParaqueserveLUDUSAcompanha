@@ -25,7 +25,9 @@ namespace LudusSDK
     {
         // Identificação
         public string sessionId;        // UUID único gerado ao iniciar a sessão
-        public string playerId;         // ID da criança (definido pelo professor)
+
+        public string studentId;        // ID único do aluno no dashboard
+        public string playerId;         // Nome do aluno exibido nos relatórios
         public string gameId;           // Ex: "para-que-serve"
         public string gameVersion;      // Ex: "1.0.0"
         public string platform;         // "WebGL" ou "Android"
@@ -51,9 +53,10 @@ namespace LudusSDK
         // -------------------------------------------------------------------------
         // Construtor — inicializa a sessão com os dados básicos
         // -------------------------------------------------------------------------
-        public LudusSession(string playerId, string gameId, string gameVersion)
+        public LudusSession(string studentId, string playerId, string gameId, string gameVersion)
         {
-            this.sessionId = Guid.NewGuid().ToString();   // ID único e automático
+            this.sessionId = Guid.NewGuid().ToString();
+            this.studentId = studentId;
             this.playerId = playerId;
             this.gameId = gameId;
             this.gameVersion = gameVersion;
